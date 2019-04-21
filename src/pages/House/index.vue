@@ -18,64 +18,14 @@
           </div>
         </div>
         <ul class="cf">
-          <li>
+          <li v-for="(item, index) in list" :key="index">
             <div class="date font-36 en">
-              <span>01</span>
+              <span>{{index + 1}}</span>
               <i></i>
             </div>
             <dl>
-              <dt class="font-24">居住地产</dt>
-              <dd class="font-12">以住宅产品为载体，提出“人、建筑与自然” 和谐的价值主张，意在通过重新思考、定义人与居住环境的关系，从关怀人性、关注生活为出发点，为消费者倡导新的生活方式。</dd>
-            </dl>
-          </li>
-          <li>
-            <div class="date font-36 en">
-              <span>02</span>
-              <i></i>
-            </div>
-            <dl>
-              <dt class="font-24">商业地产</dt>
-              <dd class="font-12">藉CBD商务标杆定位，在一线及高GDP、高增长城市不断推出高端商务系列产品，为核心城市中心区域创造更高商业价值。</dd>
-            </dl>
-          </li>
-          <li>
-            <div class="date font-36 en">
-              <span>03</span>
-              <i></i>
-            </div>
-            <dl>
-              <dt class="font-24">旅游会展地产</dt>
-              <dd class="font-12">利用自身资产优势，与国外著名酒店及商业投资管理集团强强联合，打造国际化综合性高端地产项目。</dd>
-            </dl>
-          </li>
-          <li>
-            <div class="date font-36 en">
-              <span>04</span>
-              <i></i>
-            </div>
-            <dl>
-              <dt class="font-24">商业管理</dt>
-              <dd class="font-12">构建集商业策划、设计、招商、运营管理等核心业务能力为一体的运营管理集团。</dd>
-            </dl>
-          </li>
-          <li>
-            <div class="date font-36 en">
-              <span>05</span>
-              <i></i>
-            </div>
-            <dl>
-              <dt class="font-24">物业管理</dt>
-              <dd class="font-12">为旗下物业提供天圆商务“金钥匙”、 天圆住宅“英式管家”等优质的增值服务。</dd>
-            </dl>
-          </li>
-          <li>
-            <div class="date font-36 en">
-              <span>06</span>
-              <i></i>
-            </div>
-            <dl>
-              <dt class="font-24">酒店管理</dt>
-              <dd class="font-12">与国际奢华连锁酒店品牌建立战略合作关系，共同合作开发管理高端星级酒店</dd>
+              <dt class="font-24">{{item.title}}</dt>
+              <dd class="font-12">{{item.contentShort}}</dd>
             </dl>
           </li>
         </ul>
@@ -88,12 +38,40 @@
 <script>
   import Footer from '@/components/Footer'
   import Header from '@/components/Header'
+  import classicCaseApi from '../../api/classicCase'
 
   export default {
     name: 'House',
     components: {
       Footer,
       Header
+    },
+    data () {
+      return {
+        loading: false,
+        total: 0,
+        list: null,
+        listQuery: {
+          current: 1,
+          size: 100,
+          type: '2'
+        }
+      }
+    },
+    created () {
+      this.page()
+    },
+    methods: {
+      page () {
+        // this.listQuery.type = this.$route.params.key
+        this.loading = true
+        classicCaseApi.page(this.listQuery).then(res => {
+          console.log('res.data.result.records:', res.data.result.records)
+          this.list = res.data.result.records
+        }).finally(() => {
+          this.loading = false
+        })
+      }
     }
   }
 </script>
