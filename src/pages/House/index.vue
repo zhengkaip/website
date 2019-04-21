@@ -123,7 +123,7 @@ export default {
     bottom: 0px;
 }
 .current .cur_rt {
-    margin-top: 32px;
+    margin-top: 22px;
 }
 .current a {
     color: #717171;

@@ -46,9 +46,9 @@
                                          style="height: 200px;"> </div>
                                 <div class="txt font-14">
                                     <dl>
-                                        <dd v-for="(item,i) in items"
+                                        <dd v-for="(item,i) in items.child.childName"
                                             v-bind:key="i">
-                                            <a href="/about/index.html">{{item.item}}</a>
+                                            <a href="/about/index.html">{{item}}</a>
                                         </dd>
                                     </dl>
                                 </div>
@@ -110,5 +110,3 @@ export default {
     }
 }
 </script>
-<style scoped>
-</style>

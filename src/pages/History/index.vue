@@ -779,7 +779,7 @@ export default {
     bottom: 0px;
 }
 .current .cur_rt {
-    margin-top: 32px;
+    margin-top: 22px;
 }
 .current a {
     color: #717171;
@@ -1044,6 +1044,7 @@ export default {
     float: left;
     width: 100%;
     position: relative;
+    background: none;
 }
 .ab_his_body dl dt {
     position: absolute;
@@ -1078,7 +1079,7 @@ export default {
 
 .ab_his_body .line {
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     left: 50%;
     margin-left: -2px;
     width: 4px;

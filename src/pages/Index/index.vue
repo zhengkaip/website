@@ -529,6 +529,7 @@ export default {
 <style scoped>
 .swiper-wrap {
     width: 100%;
+    padding-bottom: 50px;
 }
 .swiper-slide {
     width: 100%;
@@ -806,4 +807,48 @@ export default {
     border: 5px solid #fff;
     background: #fff;
 }
+.in_tit {
+    font-weight: normal;
+    color: #717171;
+    margin-bottom: 22px;
+    text-align: left;
+}
+.in_tit span {
+    float: left;
+}
+.in_tit .span01 {
+    line-height: 100%;
+}
+.in_tit .span02 {
+    color: #a6a6a6;
+    line-height: 14px;
+    padding: 2px 29px 0px 17px;
+}
+.in_tit a {
+    background: url(../../../static/images/in_tit_jt.png) no-repeat right center;
+    display: inline-block;
+    color: #717171;
+}
 </style>
+<style>
+.swiper-wrap .swiper-pagination {
+    padding: 5px 5px;
+}
+.swiper-wrap .swiper-pagination-bullet {
+    background: #666;
+}
+.swiper-wrap .swiper-pagination-bullet-active {
+    background: #000;
+}
+.swiper-wrap .swiper-pagination span {
+    margin: 0 5px;
+}
+.swiper-wrap .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+}
+.swiper-wrap .swiper-container {
+    box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+</style>
+

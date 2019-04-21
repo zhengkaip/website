@@ -356,7 +356,7 @@ export default {
     bottom: 0px;
 }
 .current .cur_rt {
-    margin-top: 32px;
+    margin-top: 22px;
 }
 .current a {
     color: #717171;
@@ -514,6 +514,7 @@ export default {
     border: 1px solid #d8d8d8;
     line-height: 50px;
     color: #555555;
+    cursor: pointer;
 }
 
 .bus_tuji ul {
