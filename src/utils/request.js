@@ -1,8 +1,8 @@
 import axios from 'axios'
-import {Message, MessageBox} from 'element-ui'
-import {aes, sign} from './crypto'
+import { Message, MessageBox } from 'element-ui'
+import { aes, sign } from './crypto'
 import store from '@/store'
-import {getToken} from './auth'
+import { getToken } from './auth'
 import Code from './code'
 
 const ajax = axios.create({
@@ -28,20 +28,20 @@ ajax.interceptors.response.use(
       if (res.data.code === Code.UNAUTHEN || res.data.code === Code.SESSION_TIMOUT) {
         // 处理登录相关的错误
         MessageBox.confirm('你已被登出，可以取消继续留在该页面，或者重新登录', '确定登出',
-          {confirmButtonText: '重新登录', cancelButtonText: '取消', type: 'warning'}).then(() => {
+          { confirmButtonText: '重新登录', cancelButtonText: '取消', type: 'warning' }).then(() => {
           store.dispatch('FedLogOut').then(() => {
             location.reload()
           })
         })
       } else {
-        Message({message: res.data.message, type: 'error', duration: 5000})
+        Message({ message: res.data.message, type: 'error', duration: 5000 })
       }
       return Promise.reject(new Error(res.data.message))
     }
   },
   err => {
     console.error('request err: %o', err)
-    Message({message: err.message, type: 'error', duration: 5000})
+    Message({ message: err.message, type: 'error', duration: 5000 })
     return Promise.reject(err)
   }
 )
@@ -76,7 +76,7 @@ const getConfig = (url, method, isjson, params, isfile, level = 0) => {
     }
   }
   if (level === 1) {
-    params = {encrypt: aes.en(JSON.stringify(params))}
+    params = { encrypt: aes.en(JSON.stringify(params)) }
   } else if (level === 2) {
     let timestamp = new Date().getTime()
     let token = store.state.token
@@ -88,7 +88,7 @@ const getConfig = (url, method, isjson, params, isfile, level = 0) => {
     let signstr = sign(token, timestamp, isjson ? JSON.stringify(params) : params, isjson)
     console.log('token', token)
     console.log('signstr', signstr)
-    config.headers = {level, timestamp, signstr}
+    config.headers = { level, timestamp, signstr }
     if (store.getters.token) {
       config.headers['biu-token'] = getToken()
     }
@@ -106,9 +106,9 @@ const getConfig = (url, method, isjson, params, isfile, level = 0) => {
       return param2String(data)
     }]
   }
-  if (method in {'get': true, 'delete': true}) {
+  if (method in { 'get': true, 'delete': true }) {
     config.params = params
-  } else if (method in {'post': true, 'put': true}) {
+  } else if (method in { 'post': true, 'put': true }) {
     config.data = params
   }
   return config
@@ -116,7 +116,7 @@ const getConfig = (url, method, isjson, params, isfile, level = 0) => {
 
 const errback = error => {
   console.log('request err: ' + error.message)
-  Message({message: error.message, type: 'error', duration: 5000})
+  Message({ message: error.message, type: 'error', duration: 5000 })
   return Promise.reject(error)
 }
 
@@ -126,13 +126,13 @@ const successback = res => {
   } else {
     if (res.data.code === Code.UNAUTHEN || res.data.code === Code.SESSION_TIMOUT) {
       MessageBox.confirm('你已被登出，可以取消继续留在该页面，或者重新登录', '确定登出',
-        {confirmButtonText: '重新登录', cancelButtonText: '取消', type: 'warning'}).then(() => {
+        { confirmButtonText: '重新登录', cancelButtonText: '取消', type: 'warning' }).then(() => {
         store.dispatch('FedLogOut').then(() => {
           location.reload()
         })
       })
     } else {
-      Message({message: res.data.message, type: 'error', duration: 5000})
+      Message({ message: res.data.message, type: 'error', duration: 5000 })
     }
     return Promise.reject(new Error(res.data.message))
   }

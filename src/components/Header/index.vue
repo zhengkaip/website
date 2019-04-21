@@ -27,7 +27,7 @@
         <nav>
           <ul class="cf">
             <li @mouseover="showChildNav(items)" @mouseout="hideChildNav(items)" v-for="(items,index) in navList" v-bind:key="index" :class="{'on':items.showChildNav}">
-              <a href="/index.html" class="font-16">{{items.name}}</a>
+              <a class="font-16" @click="push(items.url)">{{items.name}}</a>
               <div class="cf l1 child" style="display:block;" v-if="items.child">
                 <div class="img">
                   <img :src="items.child.img" class="ratio-img" data-ratio="0.5618" style="height: 200px;">
@@ -35,7 +35,7 @@
                 <div class="txt font-14">
                   <dl>
                     <dd v-for="(item,i) in items.child.childName" v-bind:key="i">
-                      <a href="/about/index.html">{{item}}</a>
+                      <a @click="push(items.url)">{{item.name}}</a>
                     </dd>
                   </dl>
                 </div>
@@ -53,10 +53,36 @@
   export default {
     data () {
       return {
-        navList: [
-          {
-            name: '首页'
-          },
+        navList: [{
+          name: '首页',
+          url: '/index'
+        }, {
+          name: '集团介绍',
+          showChildNav: false,
+          child: {
+            img: 'static/images/nav_adimg01.jpg',
+            childName: [{
+              name: '集团简介',
+              url: '/index'
+            }, {
+              name: '董事长简介',
+              url: '/index'
+            }, {
+              name: '董事长致辞',
+              url: '/index'
+            }, {
+              name: '发展历程',
+              url: '/index'
+            }, {
+              name: '企业文化',
+              url: '/index'
+            }, {
+              name: '企业荣誉',
+              url: '/index'
+            }]
+          }
+        },
+          /////////////////////////////////
           {
             name: '天原集团',
             showChildNav: false,
@@ -94,6 +120,9 @@
       },
       hideChildNav (items) {
         items.showChildNav = false
+      },
+      push (path) {
+        this.$router.push({ path: path })
       }
     }
   }
