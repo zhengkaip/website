@@ -183,7 +183,7 @@ filter:gray;
 .head-menu .child .img{ float:right; width:63.91%;}
 .head-menu .child .img img {  width:100%; }
 .head-menu .child .txt{ float:left; width:30%; padding-top:4px;  }
-.head-menu .child .txt dl dd { margin:4px 0px; float:left; width:100%; }
+.head-menu .child .txt dl dd { margin:4px 0px; float:left; width:100%;text-align: left; }
 .head-menu .child .txt a{ padding-left:15px; background:url(../images/jt02.png) left center no-repeat; color:#000; }
 .head-menu .child .txt a:hover,.head-menu .child .txt a.on{ color:#a79172; }
 

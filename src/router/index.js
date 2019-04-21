@@ -9,6 +9,7 @@ import Entertainment from '@/pages/Entertainment'
 import EnterDetails from '@/pages/Entertainment/details'
 import Recruitment from '@/pages/Recruitment'
 import Contact from '@/pages/Contact'
+import ShowDetail from '@/pages/Index/detail'
 
 Vue.use(Router)
 
@@ -58,6 +59,11 @@ export default new Router({
             path: '/contact',
             name: 'contact',
             component: Contact
+        },
+        {
+            path: '/showDetail',
+            name: 'showDetail',
+            component: ShowDetail
         }
     ]
 })
