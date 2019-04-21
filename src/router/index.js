@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Index from '@/pages/Index'
+import IndexDetail from '@/pages/Index/detail'
 import History from '@/pages/History'
 import Culture from '@/pages/Culture'
 import News from '@/pages/News'
@@ -14,56 +15,61 @@ import ShowDetail from '@/pages/Index/detail'
 Vue.use(Router)
 
 export default new Router({
-    routes: [
-        {
-            path: '/index',
-            name: 'Index',
-            component: Index
-        },
-        {
-            path: '/history',
-            name: 'History',
-            component: History
-        },
-        {
-            path: '/culture',
-            name: 'culture',
-            component: Culture
-        },
-        {
-            path: '/news',
-            name: 'news',
-            component: News
-        },
-        {
-            path: '/house',
-            name: 'house',
-            component: House
-        },
-        {
-            path: '/entertainment',
-            name: 'entertainment',
-            component: Entertainment
-        },
-        {
-            path: '/enterDetails',
-            name: 'enterDetails',
-            component: EnterDetails
-        },
-        {
-            path: '/recruitment',
-            name: 'recruitment',
-            component: Recruitment
-        },
-        {
-            path: '/contact',
-            name: 'contact',
-            component: Contact
-        },
-        {
-            path: '/showDetail',
-            name: 'showDetail',
-            component: ShowDetail
-        }
-    ]
+  routes: [
+    {
+      path: '/index',
+      name: 'Index',
+      component: Index
+    },
+    {
+      path: '/index/detail',
+      name: 'IndexDetail',
+      component: IndexDetail
+    },
+    {
+      path: '/history',
+      name: 'History',
+      component: History
+    },
+    {
+      path: '/culture',
+      name: 'culture',
+      component: Culture
+    },
+    {
+      path: '/news',
+      name: 'news',
+      component: News
+    },
+    {
+      path: '/house',
+      name: 'house',
+      component: House
+    },
+    {
+      path: '/entertainment',
+      name: 'entertainment',
+      component: Entertainment
+    },
+    {
+      path: '/enterDetails',
+      name: 'enterDetails',
+      component: EnterDetails
+    },
+    {
+      path: '/recruitment',
+      name: 'recruitment',
+      component: Recruitment
+    },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: Contact
+    },
+    {
+      path: '/showDetail',
+      name: 'showDetail',
+      component: ShowDetail
+    }
+  ]
 })

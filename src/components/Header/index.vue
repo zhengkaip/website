@@ -35,7 +35,7 @@
                 <div class="txt font-14">
                   <dl>
                     <dd v-for="(item,i) in items.child.childName" v-bind:key="i">
-                      <a @click="push(items.url)">{{item.name}}</a>
+                      <a @click="push(item.url, item.query)">{{item.name}}</a>
                     </dd>
                   </dl>
                 </div>
@@ -63,22 +63,46 @@
             img: 'static/images/nav_adimg01.jpg',
             childName: [{
               name: '集团简介',
-              url: '/index'
+              url: '/index/detail',
+              query: {
+                name: '集团简介',
+                type: 1
+              }
             }, {
               name: '董事长简介',
-              url: '/index'
+              url: '/index/detail',
+              query: {
+                name: '董事长简介',
+                type: 2
+              }
             }, {
               name: '董事长致辞',
-              url: '/index'
+              url: '/index/detail',
+              query: {
+                name: '董事长致辞',
+                type: 3
+              }
             }, {
               name: '发展历程',
-              url: '/index'
+              url: '/index/detail',
+              query: {
+                name: '发展历程',
+                type: 4
+              }
             }, {
               name: '企业文化',
-              url: '/index'
+              url: '/index/detail',
+              query: {
+                name: '企业文化',
+                type: 5
+              }
             }, {
               name: '企业荣誉',
-              url: '/index'
+              url: '/index/detail',
+              query: {
+                name: '企业荣誉',
+                type: 6
+              }
             }]
           }
         },
@@ -121,8 +145,8 @@
       hideChildNav (items) {
         items.showChildNav = false
       },
-      push (path) {
-        this.$router.push({ path: path })
+      push (path, query = {}) {
+        this.$router.push({ path: path, query: query })
       }
     }
   }
