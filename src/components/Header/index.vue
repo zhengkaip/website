@@ -123,7 +123,10 @@
             showChildNav: false,
             child: {
               img: 'static/images/nav_adimg01.jpg',
-              childName: ['集团简介', '董事长简介', '组织架构', '企业文化', '大事记', '企业荣誉']
+              childName: [{
+                name: '房地产开发',
+                url: '/house'
+              }]
             }
           },
           {
@@ -133,7 +136,8 @@
             name: '加入天圆'
           },
           {
-            name: '联系我们'
+            name: '联系我们',
+            url: '/contact'
           }
         ]
       }
