@@ -105,19 +105,11 @@
               }
             }]
           }
+        }, {
+          name: '新闻中心',
+          url: '/news'
         },
           /////////////////////////////////
-          {
-            name: '天原集团',
-            showChildNav: false,
-            child: {
-              img: 'static/images/nav_adimg01.jpg',
-              childName: ['集团简介', '董事长简介', '组织架构', '企业文化', '大事记', '企业荣誉']
-            }
-          },
-          {
-            name: '新闻中心'
-          },
           {
             name: '业务领域',
             showChildNav: false,

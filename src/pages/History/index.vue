@@ -4,24 +4,24 @@
     <section class="main clearfix">
       <div class="wrap clearfix">
         <div class="current cf">
-          <h1 class="fl font-36"><i></i>大事记</h1>
+          <h1 class="fl font-36"><i></i>发展历程</h1>
           <div class="cur_rt font-14 fr">
             <a title="首页" href="/index.html">首页</a>&gt;
             <a href="/about/index.html" title="天圆集团">天圆集团</a>&gt;
             <span>大事记</span>
           </div>
         </div>
+
         <div class="ab_history cf">
           <div class="ab_his_body resource-type-wrap">
             <div class="ab_line cf">
+
               <div class="history_box resource-type-list masonry" style="position: relative; height: 238px;">
                 <h4 class="font-40">2017</h4>
                 <ul>
                   <li class="panel masonry-brick" style="position: absolute; top: 0px; left: 0px;">
                     <dl class="cf">
-                      <dt class="font-24">
-                        <span>03/30<i></i></span>
-                      </dt>
+                      <dt class="font-24"><span>03/30<i></i></span></dt>
                       <dd>
                         <h3 class="font-22 ut-s">
                           <a href="/content/details37_394.html" target="_blank" title="天圆集团获廊坊银行50亿授信">天圆集团获廊坊银行50亿授信</a>
@@ -35,14 +35,14 @@
                   </li>
                 </ul>
               </div>
+
+
               <div class="history_box resource-type-list masonry" style="position: relative; height: 498px;">
                 <h4 class="font-40">2016</h4>
                 <ul>
                   <li class="panel masonry-brick" style="position: absolute; top: 0px; left: 0px;">
                     <dl class="cf">
-                      <dt class="font-24">
-                        <span>07/01<i></i></span>
-                      </dt>
+                      <dt class="font-24"><span>07/01<i></i></span></dt>
                       <dd>
                         <h3 class="font-22 ut-s">
                           <a href="/content/details37_390.html" target="_blank" title="龙脉新地标 京城新名片— 北京天圆祥泰大厦举行盛大开业典礼">龙脉新地标 京城新名片— 北京天圆祥泰大厦举行盛大开业典礼</a>
@@ -70,6 +70,8 @@
                   </li>
                 </ul>
               </div>
+
+
               <div class="history_box resource-type-list masonry" style="position: relative; height: 758px;">
                 <h4 class="font-40">2015</h4>
                 <ul>
@@ -117,6 +119,7 @@
                   </li>
                 </ul>
               </div>
+
               <div class="history_box resource-type-list masonry" style="position: relative; height: 964px;">
                 <h4 class="font-40">2014</h4>
                 <ul>
@@ -180,6 +183,8 @@
                   </li>
                 </ul>
               </div>
+
+
               <div class="history_box resource-type-list masonry" style="position: relative; height: 982px;">
                 <h4 class="font-40">2013</h4>
                 <ul>
@@ -243,6 +248,8 @@
                   </li>
                 </ul>
               </div>
+
+
               <div class="history_box resource-type-list masonry" style="position: relative; height: 686px;">
                 <h4 class="font-40">2012</h4>
                 <ul>
@@ -291,6 +298,8 @@
                   </li>
                 </ul>
               </div>
+
+
               <div class="history_box resource-type-list masonry" style="position: relative; height: 220px;">
                 <h4 class="font-40">2011</h4>
                 <ul>
@@ -310,6 +319,8 @@
                   </li>
                 </ul>
               </div>
+
+
               <div class="history_box resource-type-list masonry" style="position: relative; height: 220px;">
                 <h4 class="font-40">2008</h4>
                 <ul>
@@ -329,6 +340,8 @@
                   </li>
                 </ul>
               </div>
+
+
               <div class="history_box resource-type-list masonry" style="position: relative; height: 238px;">
                 <h4 class="font-40">2000</h4>
                 <ul>
@@ -348,6 +361,8 @@
                   </li>
                 </ul>
               </div>
+
+
               <div class="history_box resource-type-list masonry" style="position: relative; height: 220px;">
                 <h4 class="font-40">1996</h4>
                 <ul>
@@ -368,6 +383,8 @@
                   </li>
                 </ul>
               </div>
+
+
               <div class="history_box resource-type-list masonry" style="position: relative; height: 220px;">
                 <h4 class="font-40">1995</h4>
                 <ul>
@@ -387,6 +404,8 @@
                   </li>
                 </ul>
               </div>
+
+
               <div class="history_box resource-type-list masonry" style="position: relative; height: 220px;">
                 <h4 class="font-40">1992</h4>
                 <ul>
@@ -482,6 +501,7 @@
     data () {
       return {}
     },
+
     mounted () {
       $(document).ready(function () {
         var $resourceTypeList = $('.resource-type-list') // 最外层元素名
@@ -503,6 +523,7 @@
         })
       })
     },
+
     components: {
       Footer,
       Header

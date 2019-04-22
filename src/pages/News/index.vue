@@ -5,10 +5,11 @@
       <div class="current cf">
         <h1 class="fl font-36"><i></i>新闻中心</h1>
         <div class="cur_rt font-14 fr">
-          <a title="首页" href="/index.html">首页</a>&gt;
+          <router-link to="/index">首页</router-link>&gt;
           <span>新闻中心</span>
         </div>
       </div>
+
       <div class="ns_focus cf">
         <div class="divimg">
           <a href="/content/details3_405.html" target="_blank" class="tran_scale" title=""><img src="static/images/20170628101713_2562.jpg" onerror="lods(this)"></a>
@@ -24,6 +25,8 @@
           </div>
         </div>
       </div>
+
+
       <div class="ns_list interlaced cf">
         <ul class="cf">
           <li>
