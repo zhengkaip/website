@@ -126,284 +126,34 @@
       </div>
       <div class="in_news cf">
         <h2 class="in_tit cf">
-          <a href="aid_nav/links.html">
-            <span class="span01 font-30">天圆 · 新闻中心</span>
-            <span class="span02 font-12">G.S Group<br>News center</span>
-          </a>
+          <router-link to="/news">
+            <a>
+              <span class="span01 font-30">天圆 · 新闻中心</span>
+              <span class="span02 font-12">G.S Group<br>News center</span>
+            </a>
+          </router-link>
         </h2>
-
-        <div class="bx-wrapper"
-             style="max-width: 1277px; margin: 0px auto;">
-          <div class="bx-viewport"
-               style="width: 100%; overflow: hidden; position: relative; height: 454px;">
-            <ul style="width: 515%; position: relative; transition-duration: 0s; transform: translate3d(-1312.97px, 0px, 0px);">
-              <li style="float: left; list-style: none; position: relative; width: 394.667px; margin-right: 43px;"
-                  class="bx-clone">
+        <div class="bx-wrapper" style="max-width: 1277px; margin: 0px auto;">
+          <div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 454px;">
+            <ul style="width: 515%; position: relative; transition-duration: 0s;">
+              <li v-for="(item,index) in essayList.list" :key="index" style="float: left; list-style: none; position: relative; width: 394.667px; margin-right: 43px;" class="bx-clone">
                 <div class="img tran_scale">
-                  <a href="/content/details3_405.html"
-                     target="_blank"
-                     title=""><img src="static/images/20170628101720_8187.jpg"
-                                   class="ratio-img"
-                                   data-ratio="0.5668"
-                                   onerror="lods(this)"
-                                   title=""
-                                   style="height: 223px;"></a>
+                  <a title=""><img :src="item.imgUri | getdefaultImg" class="ratio-img" data-ratio="0.5668" style="height: 223px;"></a>
                 </div>
                 <div class="con">
                   <div class="date en">
-                    <span class="font-39">28</span>
-                    <span class="font-12">2017/06</span>
+                    <span class="font-39">{{item.day}}</span>
+                    <span class="font-12">{{item.yearMonth}}</span>
                   </div>
                   <h3 class="font-18">
-                    <a href="/content/details3_405.html"
-                       target="_blank"
-                       title="天圆集团董事局主席左安一率企业家考察团走进辽宁">天圆集团董事局主席左安一率企业家考察团走进辽宁</a>
+                    <router-link :to="`/newsDetail/${item.id}`">
+                      <a :title="item.title">{{item.title}}</a>
+                    </router-link>
                   </h3>
-                  <p> 6月17日至19日，天圆集团董事局主席、神州企业家俱乐部主席左安一率领神州企业家俱乐部轮值主席、北京顺天通集团董事长田在玮、步长集团董事局主席赵涛、中基控股集团董事长葛坚及部分在京省级企业商会的企业家近60人的考察团走进辽宁，开展系列商务考察交流活动，企业家考察团受到辽宁省、沈阳市、鞍山市等省市领导的高度重视。</p>
-                  <div class="more">
-                    <a href="/content/details3_405.html"
-                       target="_blank"
-                       title=""></a>
-                  </div>
-                </div>
-              </li>
-              <li style="float: left; list-style: none; position: relative; width: 394.667px; margin-right: 43px;"
-                  class="bx-clone">
-                <div class="img tran_scale">
-                  <a href="/content/details3_391.html"
-                     target="_blank"
-                     title=""><img src="static/images/20170407131916_4160.jpg"
-                                   class="ratio-img"
-                                   data-ratio="0.5668"
-                                   onerror="lods(this)"
-                                   title=""
-                                   style="height: 223px;"></a>
-                </div>
-                <div class="con">
-                  <div class="date en">
-                    <span class="font-39">30</span>
-                    <span class="font-12">2017/03</span>
-                  </div>
-                  <h3 class="font-18">
-                    <a href="/content/details3_391.html"
-                       target="_blank"
-                       title="天圆集团获廊坊银行50亿授信">天圆集团获廊坊银行50亿授信</a>
-                  </h3>
-                  <p>2017年3月30日，天圆集团与廊坊银行在天圆祥泰大厦举行签约仪式，双方达成战略合作协议，廊坊银行承诺向天圆集团提供50亿元授信额度。</p>
-                  <div class="more">
-                    <a href="/content/details3_391.html"
-                       target="_blank"
-                       title=""></a>
-                  </div>
-                </div>
-              </li>
-              <li style="float: left; list-style: none; position: relative; width: 394.667px; margin-right: 43px;"
-                  class="bx-clone">
-                <div class="img tran_scale">
-                  <a href="/content/details3_320.html"
-                     target="_blank"
-                     title=""><img src="static/images/20170111102941_1350.jpeg"
-                                   class="ratio-img"
-                                   data-ratio="0.5668"
-                                   onerror="lods(this)"
-                                   title=""
-                                   style="height: 223px;"></a>
-                </div>
-                <div class="con">
-                  <div class="date en">
-                    <span class="font-39">01</span>
-                    <span class="font-12">2016/07</span>
-                  </div>
-                  <h3 class="font-18">
-                    <a href="/content/details3_320.html"
-                       target="_blank"
-                       title="天圆祥泰大厦-龙脉新地标 京城新名片">天圆祥泰大厦-龙脉新地标 京城新名片</a>
-                  </h3>
-                  <p>2016年7月1日，阳光普照，蓝天白云。北京天圆集团总部—天圆祥泰大厦举行了隆重的开业典礼。</p>
-                  <div class="more">
-                    <a href="/content/details3_320.html"
-                       target="_blank"
-                       title=""></a>
-                  </div>
-                </div>
-              </li>
-
-              <li style="float: left; list-style: none; position: relative; width: 394.667px; margin-right: 43px;">
-                <div class="img tran_scale">
-                  <a href="/content/details3_405.html"
-                     target="_blank"
-                     title=""><img src="static/images/20170628101720_8187.jpg"
-                                   class="ratio-img"
-                                   data-ratio="0.5668"
-                                   onerror="lods(this)"
-                                   title=""
-                                   style="height: 223px;"></a>
-                </div>
-                <div class="con">
-                  <div class="date en">
-                    <span class="font-39">28</span>
-                    <span class="font-12">2017/06</span>
-                  </div>
-                  <h3 class="font-18">
-                    <a href="/content/details3_405.html"
-                       target="_blank"
-                       title="天圆集团董事局主席左安一率企业家考察团走进辽宁">天圆集团董事局主席左安一率企业家考察团走进辽宁</a>
-                  </h3>
-                  <p> 6月17日至19日，天圆集团董事局主席、神州企业家俱乐部主席左安一率领神州企业家俱乐部轮值主席、北京顺天通集团董事长田在玮、步长集团董事局主席赵涛、中基控股集团董事长葛坚及部分在京省级企业商会的企业家近60人的考察团走进辽宁，开展系列商务考察交流活动，企业家考察团受到辽宁省、沈阳市、鞍山市等省市领导的高度重视。</p>
-                  <div class="more">
-                    <a href="/content/details3_405.html"
-                       target="_blank"
-                       title=""></a>
-                  </div>
-                </div>
-              </li>
-              <li style="float: left; list-style: none; position: relative; width: 394.667px; margin-right: 43px;">
-                <div class="img tran_scale">
-                  <a href="/content/details3_391.html"
-                     target="_blank"
-                     title=""><img src="static/images/20170407131916_4160.jpg"
-                                   class="ratio-img"
-                                   data-ratio="0.5668"
-                                   onerror="lods(this)"
-                                   title=""
-                                   style="height: 223px;"></a>
-                </div>
-                <div class="con">
-                  <div class="date en">
-                    <span class="font-39">30</span>
-                    <span class="font-12">2017/03</span>
-                  </div>
-                  <h3 class="font-18">
-                    <a href="/content/details3_391.html"
-                       target="_blank"
-                       title="天圆集团获廊坊银行50亿授信">天圆集团获廊坊银行50亿授信</a>
-                  </h3>
-                  <p>2017年3月30日，天圆集团与廊坊银行在天圆祥泰大厦举行签约仪式，双方达成战略合作协议，廊坊银行承诺向天圆集团提供50亿元授信额度。</p>
-                  <div class="more">
-                    <a href="/content/details3_391.html"
-                       target="_blank"
-                       title=""></a>
-                  </div>
-                </div>
-              </li>
-              <li style="float: left; list-style: none; position: relative; width: 394.667px; margin-right: 43px;">
-                <div class="img tran_scale">
-                  <a href="/content/details3_320.html"
-                     target="_blank"
-                     title=""><img src="static/images/20170111102941_1350.jpeg"
-                                   class="ratio-img"
-                                   data-ratio="0.5668"
-                                   onerror="lods(this)"
-                                   title=""
-                                   style="height: 223px;"></a>
-                </div>
-                <div class="con">
-                  <div class="date en">
-                    <span class="font-39">01</span>
-                    <span class="font-12">2016/07</span>
-                  </div>
-                  <h3 class="font-18">
-                    <a href="/content/details3_320.html"
-                       target="_blank"
-                       title="天圆祥泰大厦-龙脉新地标 京城新名片">天圆祥泰大厦-龙脉新地标 京城新名片</a>
-                  </h3>
-                  <p>2016年7月1日，阳光普照，蓝天白云。北京天圆集团总部—天圆祥泰大厦举行了隆重的开业典礼。</p>
-                  <div class="more">
-                    <a href="/content/details3_320.html"
-                       target="_blank"
-                       title=""></a>
-                  </div>
-                </div>
-              </li>
-
-              <li style="float: left; list-style: none; position: relative; width: 394.667px; margin-right: 43px;"
-                  class="bx-clone">
-                <div class="img tran_scale">
-                  <a href="/content/details3_405.html"
-                     target="_blank"
-                     title=""><img src="static/images/20170628101720_8187.jpg"
-                                   class="ratio-img"
-                                   data-ratio="0.5668"
-                                   onerror="lods(this)"
-                                   title=""
-                                   style="height: 223px;"></a>
-                </div>
-                <div class="con">
-                  <div class="date en">
-                    <span class="font-39">28</span>
-                    <span class="font-12">2017/06</span>
-                  </div>
-                  <h3 class="font-18">
-                    <a href="/content/details3_405.html"
-                       target="_blank"
-                       title="天圆集团董事局主席左安一率企业家考察团走进辽宁">天圆集团董事局主席左安一率企业家考察团走进辽宁</a>
-                  </h3>
-                  <p> 6月17日至19日，天圆集团董事局主席、神州企业家俱乐部主席左安一率领神州企业家俱乐部轮值主席、北京顺天通集团董事长田在玮、步长集团董事局主席赵涛、中基控股集团董事长葛坚及部分在京省级企业商会的企业家近60人的考察团走进辽宁，开展系列商务考察交流活动，企业家考察团受到辽宁省、沈阳市、鞍山市等省市领导的高度重视。</p>
-                  <div class="more">
-                    <a href="/content/details3_405.html"
-                       target="_blank"
-                       title=""></a>
-                  </div>
-                </div>
-              </li>
-              <li style="float: left; list-style: none; position: relative; width: 394.667px; margin-right: 43px;"
-                  class="bx-clone">
-                <div class="img tran_scale">
-                  <a href="/content/details3_391.html"
-                     target="_blank"
-                     title=""><img src="static/images/20170407131916_4160.jpg"
-                                   class="ratio-img"
-                                   data-ratio="0.5668"
-                                   onerror="lods(this)"
-                                   title=""
-                                   style="height: 223px;"></a>
-                </div>
-                <div class="con">
-                  <div class="date en">
-                    <span class="font-39">30</span>
-                    <span class="font-12">2017/03</span>
-                  </div>
-                  <h3 class="font-18">
-                    <a href="/content/details3_391.html"
-                       target="_blank"
-                       title="天圆集团获廊坊银行50亿授信">天圆集团获廊坊银行50亿授信</a>
-                  </h3>
-                  <p>2017年3月30日，天圆集团与廊坊银行在天圆祥泰大厦举行签约仪式，双方达成战略合作协议，廊坊银行承诺向天圆集团提供50亿元授信额度。</p>
-                  <div class="more">
-                    <a href="/content/details3_391.html"
-                       target="_blank"
-                       title=""></a>
-                  </div>
-                </div>
-              </li>
-              <li style="float: left; list-style: none; position: relative; width: 394.667px; margin-right: 43px;"
-                  class="bx-clone">
-                <div class="img tran_scale">
-                  <a href="/content/details3_320.html"
-                     target="_blank"
-                     title=""><img src="static/images/20170111102941_1350.jpeg"
-                                   class="ratio-img"
-                                   data-ratio="0.5668"
-                                   onerror="lods(this)"
-                                   title=""
-                                   style="height: 223px;"></a>
-                </div>
-                <div class="con">
-                  <div class="date en">
-                    <span class="font-39">01</span>
-                    <span class="font-12">2016/07</span>
-                  </div>
-                  <h3 class="font-18">
-                    <a href="/content/details3_320.html"
-                       target="_blank"
-                       title="天圆祥泰大厦-龙脉新地标 京城新名片">天圆祥泰大厦-龙脉新地标 京城新名片</a>
-                  </h3>
-                  <p>2016年7月1日，阳光普照，蓝天白云。北京天圆集团总部—天圆祥泰大厦举行了隆重的开业典礼。</p>
-                  <div class="more">
-                    <a href="/content/details3_320.html"
-                       target="_blank"
-                       title=""></a>
-                  </div>
+                  <p>{{item.contentShort}}</p>
+                  <router-link :to="`/newsDetail/${item.id}`">
+                    <div class="more"><a title=""></a></div>
+                  </router-link>
                 </div>
               </li>
             </ul>
@@ -420,6 +170,7 @@
   import Footer from '@/components/Footer'
   import Header from '@/components/Header'
   import imgApi from '../../api/img'
+  import essayApi from '../../api/essay'
   import Code from '../../utils/code'
 
   export default {
@@ -490,12 +241,22 @@
             clickable: true
           }
         },
-        fileList: []
+        fileList: [],
+        essayList: {
+          list: [],
+          listQuery: {
+            exceptId: '',
+            type: 0,
+            current: 1,
+            size: 3
+          }
+        }
       }
     },
 
     mounted () {
       this.imgApi()
+      this.getEssay()
     },
 
     components: {
@@ -518,6 +279,16 @@
             this.fileList = res.data.result
           }
         }).catch(() => {
+        })
+      },
+      getEssay () {
+        essayApi.page(this.essayList.listQuery).then(res => {
+          this.essayList.list = res.data.result.records.map(item => {
+            if (item.title.length > 17) {
+              item.title = item.title.substring(0, 17) + '...'
+            }
+            return item
+          })
         })
       }
     }

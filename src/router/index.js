@@ -5,6 +5,7 @@ import IndexDetail from '@/pages/Index/detail'
 import History from '@/pages/History'
 import Culture from '@/pages/Culture'
 import News from '@/pages/News'
+import NewsDetail from '@/pages/News/detail'
 import House from '@/pages/House'
 import Entertainment from '@/pages/Entertainment'
 import EnterDetails from '@/pages/Entertainment/details'
@@ -40,6 +41,11 @@ export default new Router({
       path: '/news',
       name: 'news',
       component: News
+    },
+    {
+      path: '/newsDetail/:id?',
+      name: 'newsDetail',
+      component: NewsDetail
     },
     {
       path: '/house',

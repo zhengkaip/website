@@ -12,6 +12,10 @@ export default {
 
   saveOrUpdate (params) {
     return post('/essay/saveOrUpdate', params)
+  },
+
+  findPreNextData (params) {
+    return post('/essay/findPreNextData', params)
   }
 
 }

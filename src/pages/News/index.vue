@@ -12,167 +12,114 @@
 
       <div class="ns_focus cf">
         <div class="divimg">
-          <a href="/content/details3_405.html" target="_blank" class="tran_scale" title=""><img src="static/images/20170628101713_2562.jpg" onerror="lods(this)"></a>
+          <a class="tran_scale" title=""><img :src="topEssay.imgUri"></a>
         </div>
         <div class="text">
           <h2 class="font-30">
-            <a href="/content/details3_405.html" target="_blank" title="天圆集团董事局主席左安一率企业家考察团走进辽宁">天圆集团董事局主席左安一率企业家考察团走进辽宁</a>
+            <router-link :to="`/newsDetail/${topEssay.id}`">
+              <a :title="topEssay.title">{{topEssay.title}}</a>
+            </router-link>
           </h2>
-          <div class="date font-12 en">2017/06/28</div>
-          <p> 6月17日至19日，天圆集团董事局主席、神州企业家俱乐部主席左安一率领神州企业家俱乐部轮值主席、北京顺天通集团董事长田在玮、步长集团董事局主席赵涛、中基控股集团董事长葛坚及部分在京省级企业商会的企业家近60人的考察团走进辽宁，开展系列商务考察交流活动，企业家考察团受到辽宁省、沈阳市、鞍山市等省市领导的高度重视。</p>
-          <div class="more">
-            <a href="/content/details3_405.html" target="_blank"></a>
-          </div>
+          <div class="date font-12 en">{{topEssay.createTime}}</div>
+          <p>{{topEssay.contentShort}}</p>
+          <router-link :to="`/newsDetail/${topEssay.id}`">
+            <div class="more"><a></a></div>
+          </router-link>
         </div>
       </div>
 
-
       <div class="ns_list interlaced cf">
         <ul class="cf">
-          <li>
+          <li v-for="(item,index) in essay.list" :key="index" :class="{li02: index%2===1}">
             <div class="date en">
-              <span class="font-39">03</span>
-              <span class="font-12">2013/12</span>
+              <span class="font-39">{{item.day}}</span>
+              <span class="font-12">{{item.yearMonth}}</span>
             </div>
             <div class="text">
               <h2 class="font-22 ut-s">
-                <a href="/content/details3_344.html" target="_blank" title="董事长左安一出席第五届中国对外投资合作洽谈会">董事长左安一出席第五届中国对外投资合作洽谈会</a>
+                <router-link :to="`/newsDetail/${item.id}`">
+                  <a target="_blank" :title="item.title">{{item.title}}</a>
+                </router-link>
               </h2>
-              <p class="font-12">2013年12月3日，左安一董事长出席第五届中国对外投资合作洽谈会</p>
+              <p class="font-12">{{item.contentShort}}</p>
               <div class="more font-12">
-                <a href="/content/details3_344.html" target="_blank" title="">了解详情 &gt;&gt;</a>
-              </div>
-            </div>
-          </li>
-          <li class="li02">
-            <div class="date en">
-              <span class="font-39">18</span>
-              <span class="font-12">2013/10</span>
-            </div>
-            <div class="text">
-              <h2 class="font-22 ut-s">
-                <a href="/content/details3_345.html" target="_blank" title="天圆集团与中铁建设集团签订天圆祥泰双子座项目建设协议">天圆集团与中铁建设集团签订天圆祥泰双子座项目建设协议</a>
-              </h2>
-              <p class="font-12">2013年10月18日，集团董事长左安一、副董事长田霁红、董事副总裁周浩律等领导参加集团下属北京天圆祥泰置业有限公司与中铁集团的签约仪式。</p>
-              <div class="more font-12">
-                <a href="/content/details3_345.html" target="_blank" title="">了解详情 &gt;&gt;</a>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="date en">
-              <span class="font-39">27</span>
-              <span class="font-12">2013/07</span>
-            </div>
-            <div class="text">
-              <h2 class="font-22 ut-s">
-                <a href="/content/details3_346.html" target="_blank" title="董事长左安一出席第七届中国民营经济高峰会">董事长左安一出席第七届中国民营经济高峰会</a>
-              </h2>
-              <p class="font-12">2013年7月27日至29日，由中华民营企业联合会、中国法律援助基金会、中国注册税务师协会共同主办的第七届中国民营经济高峰会在北京市京西宾馆隆重召开。</p>
-              <div class="more font-12">
-                <a href="/content/details3_346.html" target="_blank" title="">了解详情 &gt;&gt;</a>
-              </div>
-            </div>
-          </li>
-          <li class="li02">
-            <div class="date en">
-              <span class="font-39">11</span>
-              <span class="font-12">2013/06</span>
-            </div>
-            <div class="text">
-              <h2 class="font-22 ut-s">
-                <a href="/content/details3_347.html" target="_blank" title="董事长左安一率团赴法国考察">董事长左安一率团赴法国考察</a>
-              </h2>
-              <p class="font-12"></p>
-              <div class="more font-12">
-                <a href="/content/details3_347.html" target="_blank" title="">了解详情 &gt;&gt;</a>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="date en">
-              <span class="font-39">28</span>
-              <span class="font-12">2013/04</span>
-            </div>
-            <div class="text">
-              <h2 class="font-22 ut-s">
-                <a href="/content/details3_348.html" target="_blank" title="董事长左安一出席民间投资与法律保障珠海研讨会">董事长左安一出席民间投资与法律保障珠海研讨会</a>
-              </h2>
-              <p class="font-12">2013年4月28日，董事长左安一应邀出席由中华民营企业联合会、中国法律援助基金会共同主办的“民间投资与法律保障（珠海）研讨会”。</p>
-              <div class="more font-12">
-                <a href="/content/details3_348.html" target="_blank" title="">了解详情 &gt;&gt;</a>
-              </div>
-            </div>
-          </li>
-          <li class="li02">
-            <div class="date en">
-              <span class="font-39">16</span>
-              <span class="font-12">2013/04</span>
-            </div>
-            <div class="text">
-              <h2 class="font-22 ut-s">
-                <a href="/content/details3_349.html" target="_blank" title="董事长左安一出席第八届华商大会">董事长左安一出席第八届华商大会</a>
-              </h2>
-              <p class="font-12"></p>
-              <div class="more font-12">
-                <a href="/content/details3_349.html" target="_blank" title="">了解详情 &gt;&gt;</a>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="date en">
-              <span class="font-39">28</span>
-              <span class="font-12">2013/03</span>
-            </div>
-            <div class="text">
-              <h2 class="font-22 ut-s">
-                <a href="/content/details3_350.html" target="_blank" title="“天圆祥泰双子座”项目开工奠基盛典">“天圆祥泰双子座”项目开工奠基盛典</a>
-              </h2>
-              <p class="font-12">3月28日上午，备受瞩目的中华龙脉上新的标志性建筑、位于奥体文化商务区的“天圆祥泰”项目正式开工奠基。</p>
-              <div class="more font-12">
-                <a href="/content/details3_350.html" target="_blank" title="">了解详情 &gt;&gt;</a>
-              </div>
-            </div>
-          </li>
-          <li class="li02">
-            <div class="date en">
-              <span class="font-39">23</span>
-              <span class="font-12">2012/08</span>
-            </div>
-            <div class="text">
-              <h2 class="font-22 ut-s">
-                <a href="/content/details3_351.html" target="_blank" title="天圆集团与新奥集团签订土地开发协议">天圆集团与新奥集团签订土地开发协议</a>
-              </h2>
-              <p class="font-12">2012年8月23日，集团董事长左安一、副董事长田霁红等领导参加集团下属北京天圆祥泰置业有限公司与新奥集团的“奥体文化商务园2#地土地开发协议”仪式。</p>
-              <div class="more font-12">
-                <a href="/content/details3_351.html" target="_blank" title="">了解详情 &gt;&gt;</a>
+                <router-link :to="`/newsDetail/${item.id}`">
+                  <a target="_blank" title="">了解详情 &gt;&gt;</a>
+                </router-link>
               </div>
             </div>
           </li>
         </ul>
       </div>
-      <paginate :page-count="20" :page-range="3" :margin-pages="2" :click-handler="clickCallback" :prev-text="'上一页'" :next-text="'下一页'" :container-class="'pagination'" :page-class="'page-item'"></paginate>
+
+      <paginate :page-count="essay.pages" :page-range="3" :margin-pages="2" :click-handler="clickCallback" :prev-text="'上一页'" :next-text="'下一页'" :container-class="'pagination'" :page-class="'page-item'"></paginate>
     </div>
     <Footer></Footer>
   </div>
 </template>
 <script>
   import 'bootstrap/dist/css/bootstrap.min.css'
-  import Footer from '@/components/Footer'
-  import Header from '@/components/Header'
+  import Footer from '../../components/Footer'
+  import Header from '../../components/Header'
+  import Pagination from '../../components/Pagination'
+
+  import essayApi from '../../api/essay'
 
   export default {
     name: 'news',
+
+    components: { Footer, Header, Pagination },
+
     data () {
-      return {}
+      return {
+        essay: {
+          total: 0,
+          pages: 0,
+          list: [],
+          listLoading: false,
+          listQuery: {
+            type: 0,
+            current: 1,
+            size: 10
+          }
+        }, topEssay: {
+          imgUri: ''
+        }
+      }
     },
-    components: {
-      Footer,
-      Header
+
+    mounted () {
+      this.getTopEssay()
+      this.getEssay()
     },
+
     methods: {
       clickCallback (pageNum) {
-        console.log(pageNum)
+        this.essay.listQuery.current = pageNum
+        this.getEssay()
+      },
+      getTopEssay () {
+        essayApi.getById({ type: -1, isAddViewCount: 1 }).then(res => {
+          this.topEssay = res.data.result
+        })
+      },
+      getEssay () {
+        this.essay.listLoading = true
+        essayApi.page(this.essay.listQuery).then(res => {
+          this.essay.list = res.data.result.records.map(item => {
+            if (item.title.length > 17) {
+              item.title = item.title.substring(0, 17) + '...'
+            }
+            if (item.contentShort.length > 100) {
+              item.contentShort = item.contentShort.substring(0, 100) + '...'
+            }
+            return item
+          })
+          this.essay.pages = res.data.result.pages
+          this.essay.total = res.data.result.total
+        }).finally(() => {
+          this.essay.listLoading = false
+        })
       }
     }
   }

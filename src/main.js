@@ -7,8 +7,12 @@ import '../static/css/common.css'
 import 'swiper/dist/css/swiper.css'
 import Paginate from 'vuejs-paginate'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
+import * as filters from './filters'
+
 Vue.use(VueAwesomeSwiper)
 Vue.component('paginate', Paginate)
+// register global utility filters.
+Object.keys(filters).forEach(key => Vue.filter(key, filters[key]))
 
 Vue.config.productionTip = false
 /* eslint-disable no-new */
