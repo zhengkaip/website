@@ -7,6 +7,8 @@ import Culture from '@/pages/Culture'
 import News from '@/pages/News'
 import NewsDetail from '@/pages/News/detail'
 import House from '@/pages/House'
+import Hotel from '@/pages/Hotel'
+import Education from '@/pages/Education'
 import Entertainment from '@/pages/Entertainment'
 import EnterDetails from '@/pages/Entertainment/details'
 import Recruitment from '@/pages/Recruitment'
@@ -51,6 +53,16 @@ export default new Router({
       path: '/house',
       name: 'house',
       component: House
+    },
+    {
+      path: '/hotel',
+      name: 'hotel',
+      component: Hotel
+    },
+    {
+      path: '/education',
+      name: 'education',
+      component: Education
     },
     {
       path: '/entertainment',

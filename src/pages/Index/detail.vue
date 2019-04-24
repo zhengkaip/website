@@ -7,8 +7,13 @@
           <h1 class="fl font-36"><i></i>{{query.name}}</h1>
           <div class="cur_rt font-14 fr">
             <router-link to="/index">首页</router-link>&gt;
-            <router-link to="/index/detail">集团介绍</router-link>&gt;
-            <span>{{query.name}}</span>
+            <div v-if="query.type >= 20 && query.type < 30" style="display: inline-block">
+              <router-link to="">加入我们</router-link>
+            </div>
+            <div v-else style="display: inline-block">
+              <router-link :to="{ path: '/index/detail', query: {name: '集团简介', type: 1}}">集团介绍</router-link>
+            </div>
+            &gt;<span>{{query.name}}</span>
           </div>
         </div>
         <div class="ab_intro cf">
@@ -24,7 +29,9 @@
 <script>
   import Footer from '@/components/Footer'
   import Header from '@/components/Header'
+
   import essayApi from '../../api/essay'
+  import articleApi from '../../api/article'
 
   export default {
     name: 'showDetail',
@@ -50,12 +57,24 @@
 
     methods: {
       getArticleById (type) {
-        essayApi.getById({ type }).then(res => {
-          if (res.data.result) {
-            this.essay = res.data.result
-          }
-        })
-      }
+        if (type >= 20 && type <= 30) {
+          articleApi.getArticleById(null, type).then(res => {
+            console.log('<><><>><><', res.data)
+
+            if (res.data.result) {
+              this.essay.content = res.data.result.body.contentHtml
+            } else {
+              this.essay.content = ''
+            }
+          })
+        } else {
+          essayApi.getById({ type }).then(res => {
+            if (res.data.result) {
+              this.essay = res.data.result
+            }
+          })
+        }
+      },
     },
 
     watch: {

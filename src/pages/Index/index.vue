@@ -15,49 +15,56 @@
     <div class="in_business cf">
       <div class="wrap clearfix">
         <h2 class="in_tit cf">
-          <a href="business/index.html">
-            <span class="span01 font-30">天圆 · 业务领域</span>
-            <span class="span02 font-12">G.S Group<br>Business field</span>
-          </a>
+          <router-link to="/house">
+            <a>
+              <span class="span01 font-30">天圆 · 业务领域</span>
+              <span class="span02 font-12">G.S Group<br>Business field</span>
+            </a>
+          </router-link>
         </h2>
-
         <ul class="cf">
           <li>
-            <a href="business/index.html" title="房地产">
-              <div class="img tran_scale">
+            <router-link to="/house">
+              <a title="房地产">
+                <div class="img tran_scale">
                 <span class="auto-img">
-                  <img src="static/images/20170221110745_1782.jpg" onerror="lods(this)" style="width: auto; height: 504px; margin-top: 0px; margin-left: 0px; visibility: visible;">
+                  <img src="static/images/20170221110745_1782.jpg" style="width: auto; height: 504px; margin-top: 0px; margin-left: 0px; visibility: visible;">
                 </span>
-              </div>
-              <div class="tit">
-                <span class="font-35">房地产<i></i></span>
-              </div>
-            </a>
+                </div>
+                <div class="tit">
+                  <span class="font-35">房地产<i></i></span>
+                </div>
+              </a>
+            </router-link>
           </li>
           <li>
-            <a href="business/finance.html" title="金融">
-              <div class="img tran_scale">
+            <router-link to="/hotel">
+              <a title="酒店">
+                <div class="img tran_scale">
                 <span class="auto-img">
-                  <img src="static/images/20170228150314_4504.jpg" onerror="lods(this)" style="width: auto; height: 504px; margin-top: 0px; margin-left: 0px; visibility: visible;">
+                  <img src="static/images/20170228150314_4504.jpg" style="width: auto; height: 504px; margin-top: 0px; margin-left: 0px; visibility: visible;">
                 </span>
-              </div>
-              <div class="tit">
-                <span class="font-35">金融<i></i></span>
-              </div>
-            </a>
+                </div>
+                <div class="tit">
+                  <span class="font-35">酒店<i></i></span>
+                </div>
+              </a>
+            </router-link>
           </li>
+
           <li>
-            <a href="business/movies.html"
-               title="影视">
-              <div class="img tran_scale">
+            <router-link to="/education">
+              <a title="教育">
+                <div class="img tran_scale">
                 <span class="auto-img">
-                  <img src="static/images/20170221111126_4488.jpg" onerror="lods(this)" style="width: auto; height: 504px; margin-top: 0px; margin-left: 0px; visibility: visible;">
+                  <img src="static/images/20170221111126_4488.jpg" style="width: auto; height: 504px; margin-top: 0px; margin-left: 0px; visibility: visible;">
                 </span>
-              </div>
-              <div class="tit">
-                <span class="font-35">影视<i></i></span>
-              </div>
-            </a>
+                </div>
+                <div class="tit">
+                  <span class="font-35">教育<i></i></span>
+                </div>
+              </a>
+            </router-link>
           </li>
         </ul>
       </div>
@@ -67,62 +74,24 @@
         <div class="text fl">
           <h2 class="font-30 cf">我们是谁</h2>
           <div class="con">
-            <div class="edit_con_original edit-con-original">
-              <p>
-                <span class="span01">天圆集团</span>前身天圆经贸有限公司创办于1992年，1995年成立集团公司，至今已发展成为总资产超150亿的综合性集团公司。 </p>
-              <p> 在左安一董事长的带领下，秉承“
-                <span>商决于智、信取于诚</span>”的经营理念，锐意进取，开拓创新，逐步实现了自身经营的规范化、多元化和国际化。 </p>
-              <p> 目前，天圆集团已形成实业投资与金融资本两大板块互补互动的发展格局，经营领域涉及房地产开发、金融投资、资产管理、企业并购、生物科技、影视文化等业务。 </p>
-            </div>
+            <div class="edit_con_original edit-con-original" v-html="essay.content"></div>
           </div>
           <div class="more font-16">
-            <a href="about/index.html" title="查看详情">查看详情</a>
+            <a @click="push('/index/detail', {name: '集团简介', type: 1})" title="查看详情">查看详情</a>
           </div>
         </div>
         <div class="in_video fr">
-          <div class="bx-wrapper"
-               style="max-width: 100%;">
+          <div class="bx-wrapper" style="max-width: 100%;">
             <div class="bx-viewport"
                  style="width: 100%; overflow: hidden; position: relative; height: 330px;">
-              <ul style="width: 415%; position: relative; transition-duration: 0s; transform: translate3d(-587px, 0px, 0px);">
-                <li style="float: left; list-style: none; position: relative; width: 587px;" class="bx-clone">
-                  <img src="static/images/20170228181253_1725.jpg" title="/upload/mobile.mp4" alt="/upload/mobile.mp4" onerror="lods(this)">
-                  <a href="javascript:void(0);"
-                     data-mp4="static/images/20170301095808_0024.mp4"
-                     data-img="static/images/20170228/20170228181253_1725.jpg"
-                     title="/upload/mobile.mp4"
-                     alt="/upload/mobile.mp4"></a>
-                </li>
-
-                <li style="float: left; list-style: none; position: relative; width: 587px;"><img src="static/images/20170228175731_0347.jpg"
-                                                                                                  onerror="lods(this)">
-                  <a href="javascript:void(0);"
-                     data-mp4="static/images/20170228180153_8747.mp4"
-                     data-img="static/images/20170228175731_0347.jpg"></a>
-                </li>
-                <li style="float: left; list-style: none; position: relative; width: 587px;"><img src="static/images/20170228181253_1725.jpg"
-                                                                                                  title="/upload/mobile.mp4"
-                                                                                                  alt="/upload/mobile.mp4"
-                                                                                                  onerror="lods(this)">
-                  <a href="javascript:void(0);"
-                     data-mp4="static/images/20170301095808_0024.mp4"
-                     data-img="static/images/20170228/20170228181253_1725.jpg"
-                     title="/upload/mobile.mp4"
-                     alt="/upload/mobile.mp4"></a>
-                </li>
-
-                <li style="float: left; list-style: none; position: relative; width: 587px;"
-                    class="bx-clone"><img src="static/images/20170228175731_0347.jpg"
-                                          onerror="lods(this)">
-                  <a href="javascript:void(0);"
-                     data-mp4="static/images/20170228180153_8747.mp4"
-                     data-img="static/images/20170228/20170228175731_0347.jpg"></a>
+              <ul style="width: 415%; position: relative; transition-duration: 0s;">
+                <li style="float: left; list-style: none; position: relative; width: 587px;">
+                  <img :src="essay.imgUri" title="essay.title">
                 </li>
               </ul>
             </div>
           </div>
         </div>
-
       </div>
       <div class="in_news cf">
         <h2 class="in_tit cf">
@@ -250,6 +219,11 @@
             current: 1,
             size: 3
           }
+        },
+        essay: {
+          title: '',
+          content: '',
+          imgUri: ''
         }
       }
     },
@@ -257,6 +231,7 @@
     mounted () {
       this.imgApi()
       this.getEssay()
+      this.getArticleById(1)
     },
 
     components: {
@@ -281,6 +256,13 @@
         }).catch(() => {
         })
       },
+      getArticleById (type) {
+        essayApi.getById({ type }).then(res => {
+          if (res.data.result) {
+            this.essay = res.data.result
+          }
+        })
+      },
       getEssay () {
         essayApi.page(this.essayList.listQuery).then(res => {
           this.essayList.list = res.data.result.records.map(item => {
@@ -290,6 +272,9 @@
             return item
           })
         })
+      },
+      push (path, query = {}) {
+        this.$router.push({ path: path, query: query })
       }
     }
   }
@@ -297,6 +282,11 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  .bx-viewport {
+    /*fix other elements on the page moving (on Chrome)*/
+    -webkit-transform: translatez(0);
+  }
+
   .swiper-wrap {
     width: 100%;
     padding-bottom: 50px;

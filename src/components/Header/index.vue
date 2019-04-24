@@ -4,8 +4,8 @@
       <div class="wrap cf">
         <div class="welcome font-12 en fl">Welcome to G.S Group</div>
         <div class="top_share fr">
-          <a href="javascript:void();" class="a-1"></a>
-          <a href="javascript:void();" class="a-2 weixinbut" data-qrcode="/Upload/image/20170220/20170220135420_5371.jpg"></a>
+          <a class="a-1"></a>
+          <a class="a-2 weixinbut" data-qrcode="/Upload/image/20170220/20170220135420_5371.jpg"></a>
         </div>
         <div class="top_tel en fr">
           <ul>
@@ -53,63 +53,65 @@
   export default {
     data () {
       return {
-        navList: [{
-          name: '首页',
-          url: '/index'
-        }, {
-          name: '集团介绍',
-          showChildNav: false,
-          child: {
-            img: 'static/images/nav_adimg01.jpg',
-            childName: [{
-              name: '集团简介',
-              url: '/index/detail',
-              query: {
+        navList: [
+          {
+            name: '首页',
+            url: '/index'
+          },
+          {
+            name: '集团介绍',
+            showChildNav: false,
+            child: {
+              img: 'static/images/nav_adimg01.jpg',
+              childName: [{
                 name: '集团简介',
-                type: 1
-              }
-            }, {
-              name: '董事长简介',
-              url: '/index/detail',
-              query: {
+                url: '/index/detail',
+                query: {
+                  name: '集团简介',
+                  type: 1
+                }
+              }, {
                 name: '董事长简介',
-                type: 2
-              }
-            }, {
-              name: '董事长致辞',
-              url: '/index/detail',
-              query: {
+                url: '/index/detail',
+                query: {
+                  name: '董事长简介',
+                  type: 2
+                }
+              }, {
                 name: '董事长致辞',
-                type: 3
-              }
-            }, {
-              name: '发展历程',
-              url: '/index/detail',
-              query: {
+                url: '/index/detail',
+                query: {
+                  name: '董事长致辞',
+                  type: 3
+                }
+              }, {
                 name: '发展历程',
-                type: 4
-              }
-            }, {
-              name: '企业文化',
-              url: '/index/detail',
-              query: {
+                url: '/index/detail',
+                query: {
+                  name: '发展历程',
+                  type: 4
+                }
+              }, {
                 name: '企业文化',
-                type: 5
-              }
-            }, {
-              name: '企业荣誉',
-              url: '/index/detail',
-              query: {
+                url: '/index/detail',
+                query: {
+                  name: '企业文化',
+                  type: 5
+                }
+              }, {
                 name: '企业荣誉',
-                type: 6
-              }
-            }]
-          }
-        }, {
-          name: '新闻中心',
-          url: '/news'
-        },
-          /////////////////////////////////
+                url: '/index/detail',
+                query: {
+                  name: '企业荣誉',
+                  type: 6
+                }
+              }]
+            }
+          },
+          {
+            name: '新闻中心',
+            url: '/news'
+          },
           {
             name: '业务领域',
             showChildNav: false,
@@ -122,10 +124,47 @@
             }
           },
           {
-            name: '社会责任'
-          },
-          {
-            name: '加入天圆'
+            name: '加入我们',
+            showChildNav: false,
+            child: {
+              img: 'static/images/nav_adimg01.jpg',
+              childName: [{
+                name: '人才理念',
+                url: '/index/detail',
+                query: {
+                  name: '人才理念',
+                  type: 20
+                }
+              }, {
+                name: '人才战略',
+                url: '/index/detail',
+                query: {
+                  name: '人才战略',
+                  type: 21
+                }
+              }, {
+                name: '人才发展',
+                url: '/index/detail',
+                query: {
+                  name: '人才发展',
+                  type: 22
+                }
+              }, {
+                name: '社会招聘',
+                url: '/index/detail',
+                query: {
+                  name: '社会招聘',
+                  type: 23
+                }
+              }, {
+                name: '校园招聘',
+                url: '/index/detail',
+                query: {
+                  name: '校园招聘',
+                  type: 24
+                }
+              }]
+            }
           },
           {
             name: '联系我们',
