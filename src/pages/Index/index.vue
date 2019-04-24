@@ -77,7 +77,7 @@
             <div class="edit_con_original edit-con-original" v-html="essay.content"></div>
           </div>
           <div class="more font-16">
-            <a @click="push('/index/detail', {name: '集团简介', type: 1})" title="查看详情">查看详情</a>
+            <a @click="push('/index/detail', {name: '集团简介', type: 1})" title="查看详情" class="pointer">查看详情</a>
           </div>
         </div>
         <div class="in_video fr">

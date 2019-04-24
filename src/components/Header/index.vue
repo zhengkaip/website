@@ -35,7 +35,7 @@
                 <div class="txt font-14">
                   <dl>
                     <dd v-for="(item,i) in items.child.childName" v-bind:key="i">
-                      <a @click="push(item.url, item.query)">{{item.name}}</a>
+                      <a @click="push(item.url, item.query)" class="pointer">{{item.name}}</a>
                     </dd>
                   </dl>
                 </div>

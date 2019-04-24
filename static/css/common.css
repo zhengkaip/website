@@ -525,6 +525,10 @@ a * {
 }
 
 
+.pointer {
+  cursor: pointer;
+}
+
 .header {
   position: fixed;
   left: 0px;
