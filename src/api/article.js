@@ -1,11 +1,11 @@
 /**
  * 文章相关接口
  */
-import {get, postJson} from '../utils/request'
+import { get, postJson } from '../utils/request'
 
 export default {
 
-  getArticles(query, page) {
+  getArticles (query, page) {
     return get('/articles/new', {
       pageNum: page.pageNum,
       pageSize: page.pageSize,
@@ -17,7 +17,8 @@ export default {
       categoryId: query.categoryId
     })
   },
-  getnpArticles(query, page) {
+
+  getnpArticles (query, page) {
     return get('/articles/newpower', {
       pageNum: page.pageNum,
       pageSize: page.pageSize,
@@ -30,38 +31,40 @@ export default {
     })
   },
 
-  getHotArtices() {
+  getHotArtices () {
     return get('/articles/hot')
   },
 
-  getNewArtices() {
+  getNewArtices () {
     return get('/articles/new')
   },
-  getNewNewPowerArtices() {
+
+  getNewNewPowerArtices () {
     return get('/articles/newpower')
   },
-  viewArticle(id) {
+
+  viewArticle (id) {
     return get(`/articles/view/${id}`)
   },
 
-  getArticlesByCategory(id) {
+  getArticlesByCategory (id) {
     return get(`/articles/category/${id}`)
   },
 
-  getArticlesByTag(id) {
+  getArticlesByTag (id) {
     return get(`/articles/tag/${id}`)
   },
 
-  publishArticle(article) {
+  publishArticle (article) {
     return postJson('/articles/publish', article)
   },
 
-  listArchives() {
+  listArchives () {
     return get('/articles/listArchives')
   },
 
-  getArticleById(id, type = null) {
-    return get(`/articles/${id}`, {type: type})
+  getArticleById (id, type = null) {
+    return get(`/articles/${id}`, { type: type })
   }
 
 }

@@ -18,7 +18,7 @@
         <div class="con_contact interlaced cf">
 
           <div class="con_text">
-            <h2 class="font-30  cf">天圆集团</h2>
+            <h2 class="font-30  cf">{{form.conpanyname}}</h2>
 
             <ul class="cf">
               <li>
@@ -28,7 +28,7 @@
                       <h3>
                         <span>地址</span>
                       </h3>
-                      <p>北京市朝阳区安定路5号 天圆祥泰大厦24层</p>
+                      <p>{{form.addr}}</p>
                     </div>
                   </div>
                 </div>
@@ -42,7 +42,7 @@
                       <h3>
                         <span>电话</span>
                       </h3>
-                      <p>010-50908666</p>
+                      <p>{{form.phone}}</p>
                     </div>
                   </div>
                 </div>
@@ -55,7 +55,7 @@
                       <h3>
                         <span>传真</span>
                       </h3>
-                      <p>010-50908686</p>
+                      <p>{{form.fax}}</p>
                     </div>
                   </div>
                 </div>
@@ -68,7 +68,7 @@
                       <h3>
                         <span>邮编</span>
                       </h3>
-                      <p>100029</p>
+                      <p>{{form.pcode}}</p>
                     </div>
                   </div>
                 </div>
@@ -89,13 +89,42 @@
   import Footer from '@/components/Footer'
   import Header from '@/components/Header'
 
+  import contactApi from '../../api/contact'
+
   export default {
     name: 'contact',
     components: {
       Footer,
       Header
     },
+    data () {
+      return {
+        form: {
+          id: '',
+          addr: '',
+          phone: '',
+          fax: '',
+          pcode: '',
+          conpanyname: ''
+        }
+      }
+    },
+    methods: {
+      get () {
+        contactApi.get().then((res) => {
+          console.log('res:', res.data)
+          if (res.data.code === 200) {
+            this.form = res.data.result
+          } else {
+            this.$message({ message: '数据获取失败！', type: 'error', showClose: true })
+          }
+        }).catch(() => {
+          this.$message({ message: '数据获取失败！', type: 'error', showClose: true })
+        })
+      }
+    },
     mounted () {
+      this.get()
       var map = new BMap.Map('map')
       var point = new BMap.Point(116.404, 39.915)
       map.centerAndZoom(point, 15)

@@ -1,119 +1,97 @@
 <template>
-    <div>
-        <Header></Header>
-        <div class="wrap clearfix">
-            <div class="current cf">
-                <h1 class="fl font-36">
-                    <i></i>房地产</h1>
-                <div class="cur_rt font-14 fr">
-                    <a title="首页"
-                       href="/index.html">首页</a>&gt;
-                    <a href="/business/index.html"
-                       title="业务领域">业务领域</a>&gt;
-                    <span>房地产</span>
-                </div>
-            </div>
-            <div class="bus_real_head cf">
-                <div class="tit cf">
-                    <div class="edit_con_original edit-con-original">
-                        2013年是天圆集团发展历程中具有里程碑意义的一年，<br>
-                        <b class="font-24">我们将以天圆祥泰双子座项目为新起点，立足北京、布局全国，</b><br> 力争五年内完成三百万平米的综合开发,成为具有大型商业、住宅、旅游会展综合性地产开发公司。 <br> 业务发展方向:
-                    </div>
-                </div>
-
-                <ul class="cf">
-                    <li>
-                        <div class="date font-36 en">
-                            <span>01</span>
-                            <i></i>
-                        </div>
-                        <dl>
-                            <dt class="font-24">居住地产</dt>
-                            <dd class="font-12">以住宅产品为载体，提出“人、建筑与自然” 和谐的价值主张，意在通过重新思考、定义人与居住环境的关系，从关怀人性、关注生活为出发点，为消费者倡导新的生活方式。</dd>
-                        </dl>
-                    </li>
-                    <li>
-                        <div class="date font-36 en">
-                            <span>02</span>
-                            <i></i>
-                        </div>
-                        <dl>
-                            <dt class="font-24">商业地产</dt>
-                            <dd class="font-12">藉CBD商务标杆定位，在一线及高GDP、高增长城市不断推出高端商务系列产品，为核心城市中心区域创造更高商业价值。</dd>
-                        </dl>
-                    </li>
-                    <li>
-                        <div class="date font-36 en">
-                            <span>03</span>
-                            <i></i>
-                        </div>
-                        <dl>
-                            <dt class="font-24">旅游会展地产</dt>
-                            <dd class="font-12">利用自身资产优势，与国外著名酒店及商业投资管理集团强强联合，打造国际化综合性高端地产项目。</dd>
-                        </dl>
-                    </li>
-                    <li>
-                        <div class="date font-36 en">
-                            <span>04</span>
-                            <i></i>
-                        </div>
-                        <dl>
-                            <dt class="font-24">商业管理</dt>
-                            <dd class="font-12">构建集商业策划、设计、招商、运营管理等核心业务能力为一体的运营管理集团。</dd>
-                        </dl>
-                    </li>
-                    <li>
-                        <div class="date font-36 en">
-                            <span>05</span>
-                            <i></i>
-                        </div>
-                        <dl>
-                            <dt class="font-24">物业管理</dt>
-                            <dd class="font-12">为旗下物业提供天圆商务“金钥匙”、 天圆住宅“英式管家”等优质的增值服务。</dd>
-                        </dl>
-                    </li>
-                    <li>
-                        <div class="date font-36 en">
-                            <span>06</span>
-                            <i></i>
-                        </div>
-                        <dl>
-                            <dt class="font-24">酒店管理</dt>
-                            <dd class="font-12">与国际奢华连锁酒店品牌建立战略合作关系，共同合作开发管理高端星级酒店</dd>
-                        </dl>
-                    </li>
-                </ul>
-
-            </div>
+  <div>
+    <Header></Header>
+    <div class="wrap clearfix">
+      <div class="current cf">
+        <h1 class="fl font-36"><i></i>房地产</h1>
+        <div class="cur_rt font-14 fr">
+          <a title="首页" href="/index.html">首页</a>&gt;
+          <a href="/business/index.html" title="业务领域">业务领域</a>&gt;
+          <span>房地产</span>
         </div>
-        <Footer></Footer>
+      </div>
+      <div class="bus_real_head cf">
+        <!--<div class="tit cf">-->
+          <!--<div class="edit_con_original edit-con-original">-->
+            <!--2013年是天圆集团发展历程中具有里程碑意义的一年，<br>-->
+            <!--<b class="font-24">我们将以天圆祥泰双子座项目为新起点，立足北京、布局全国，</b><br> 力争五年内完成三百万平米的综合开发,成为具有大型商业、住宅、旅游会展综合性地产开发公司。 <br> 业务发展方向:-->
+          <!--</div>-->
+        <!--</div>-->
+        <ul class="cf">
+          <li v-for="(item, index) in list" :key="index">
+            <div class="date font-36 en">
+              <span>{{index + 1}}</span>
+              <i></i>
+            </div>
+            <dl>
+              <dt class="font-24">{{item.title}}</dt>
+              <dd class="font-12">{{item.contentShort}}</dd>
+            </dl>
+          </li>
+        </ul>
+      </div>
     </div>
+    <Footer></Footer>
+  </div>
 </template>
+
 <script>
-import Footer from '@/components/Footer'
-import Header from '@/components/Header'
-export default {
+  import Footer from '@/components/Footer'
+  import Header from '@/components/Header'
+  import classicCaseApi from '../../api/classicCase'
+
+  export default {
     name: 'House',
     components: {
-        Footer,
-        Header
+      Footer,
+      Header
+    },
+    data () {
+      return {
+        loading: false,
+        total: 0,
+        list: null,
+        listQuery: {
+          current: 1,
+          size: 100,
+          type: '2'
+        }
+      }
+    },
+    created () {
+      this.page()
+    },
+    methods: {
+      page () {
+        // this.listQuery.type = this.$route.params.key
+        this.loading = true
+        classicCaseApi.page(this.listQuery).then(res => {
+          console.log('res.data.result.records:', res.data.result.records)
+          this.list = res.data.result.records
+        }).finally(() => {
+          this.loading = false
+        })
+      }
     }
-}
+  }
 </script>
+
 <style scoped>
-/***********************current************************/
-.current {
+  /***********************current************************/
+  .current {
     border-bottom: 1px solid #ae997d;
     padding: 15px 0px 0px;
     margin-bottom: 42px;
-}
-.current h1 {
+  }
+
+  .current h1 {
     font-weight: normal;
     color: #717171;
     position: relative;
     padding-bottom: 14px;
-}
-.current h1 i {
+  }
+
+  .current h1 i {
     width: 100%;
     min-width: 182px;
     height: 3px;
@@ -121,53 +99,63 @@ export default {
     position: absolute;
     left: 0px;
     bottom: 0px;
-}
-.current .cur_rt {
+  }
+
+  .current .cur_rt {
     margin-top: 22px;
-}
-.current a {
+  }
+
+  .current a {
     color: #717171;
     margin: 0px 5px;
-}
-.current a:hover {
+  }
+
+  .current a:hover {
     color: #a79172;
-}
-.current span {
+  }
+
+  .current span {
     padding-left: 5px;
     color: #a79172;
-}
-/************************bussiness*****************************/
-/******bus_real_head******/
-.bus_real_head {
+  }
+
+  /************************bussiness*****************************/
+  /******bus_real_head******/
+  .bus_real_head {
     background: url(../../../static/images/bus_real_head_bg.jpg) repeat-y center center;
-}
-.bus_real_head .tit {
+  }
+
+  .bus_real_head .tit {
     text-align: center;
     color: #636363;
     padding: 71px 0px 15px;
     line-height: 171%;
-}
-.bus_real_head .tit b {
+  }
+
+  .bus_real_head .tit b {
     padding: 6px 0px 14px;
     display: inline-block;
-}
+  }
 
-.bus_real_head ul {
+  .bus_real_head ul {
     padding-left: 2.5%;
-}
-.bus_real_head ul li {
+  }
+
+  .bus_real_head ul li {
     float: left;
     width: 31.5%;
     padding: 3.65% 0px 1.5%;
-}
-.bus_real_head ul li .date {
+  }
+
+  .bus_real_head ul li .date {
     float: left;
     padding: 0px 6px 6px 0px;
     position: relative;
     margin-left: 16.4%;
     margin-right: 7.25%;
-}
-.bus_real_head ul li .date span {
+  }
+
+  .bus_real_head ul li .date span {
     position: absolute;
     left: 6px;
     font-weight: bold;
@@ -179,25 +167,28 @@ export default {
     text-align: center;
     line-height: 60px;
     color: #fff;
-}
-.bus_real_head ul li .date i {
+  }
+
+  .bus_real_head ul li .date i {
     width: 56px;
     height: 56px;
     display: inline-block;
     border: 2px solid #c2ab8a;
-}
+  }
 
-.bus_real_head ul li dl {
+  .bus_real_head ul li dl {
     padding-right: 9%;
     overflow: hidden;
-}
-.bus_real_head ul li dl dt {
+  }
+
+  .bus_real_head ul li dl dt {
     line-height: 100%;
     padding-bottom: 18px;
-}
-.bus_real_head ul li dl dd {
+  }
+
+  .bus_real_head ul li dl dd {
     text-align: justify;
     height: 9em;
     overflow: hidden;
-}
+  }
 </style>

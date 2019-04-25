@@ -2,428 +2,127 @@
   <div>
     <Header></Header>
     <div class="swiper-wrap">
-      <swiper :options="swiperOption"
-              ref="mySwiper">
-        <swiper-slide><img src="static/images/20170228150346_7112.jpg"
-                           class="ratio-img"
-                           data-ratio="0.4386"></swiper-slide>
-        <swiper-slide><img src="static/images/20170228150346_7112.jpg"
-                           class="ratio-img"
-                           data-ratio="0.4386"></swiper-slide>
+      <swiper :options="swiperOption" ref="mySwiper" style="margin-top: 10px;">
+        <swiper-slide v-for="(item,index) in fileList" :key="index">
+          <div style="display: flex;justify-content: center;align-items: center;height: 300px;">
+            <img :src="item.url" class="ratio-img" data-ratio="0.4386">
+          </div>
+        </swiper-slide>
       </swiper>
       <!--以下看需要添加-->
-      <div class="swiper-pagination "
-           slot="pagination"></div>
+      <div class="swiper-pagination " slot="pagination"></div>
     </div>
     <div class="in_business cf">
       <div class="wrap clearfix">
         <h2 class="in_tit cf">
-          <a href="business/index.html">
-            <span class="span01 font-30">天圆 · 业务领域</span>
-            <span class="span02 font-12">G.S Group<br>Business field</span>
-          </a>
+          <router-link to="/house">
+            <a>
+              <span class="span01 font-30">天圆 · 业务领域</span>
+              <span class="span02 font-12">G.S Group<br>Business field</span>
+            </a>
+          </router-link>
         </h2>
-
         <ul class="cf">
           <li>
-            <a href="business/index.html"
-               title="房地产">
-              <div class="img tran_scale">
-                                <span class="auto-img"><img src="static/images/20170221110745_1782.jpg"
-                                                            onerror="lods(this)"
-                                                            style="width: auto; height: 504px; margin-top: 0px; margin-left: 0px; visibility: visible;"></span>
-              </div>
-              <div class="tit">
-                                <span class="font-35">房地产
-                                    <i></i>
-                                </span>
-              </div>
-            </a>
+            <router-link to="/house">
+              <a title="房地产">
+                <div class="img tran_scale">
+                <span class="auto-img">
+                  <img src="static/images/20170221110745_1782.jpg" style="width: auto; height: 504px; margin-top: 0px; margin-left: 0px; visibility: visible;">
+                </span>
+                </div>
+                <div class="tit">
+                  <span class="font-35">房地产<i></i></span>
+                </div>
+              </a>
+            </router-link>
           </li>
           <li>
-            <a href="business/finance.html"
-               title="金融">
-              <div class="img tran_scale">
-                                <span class="auto-img"><img src="static/images/20170228150314_4504.jpg"
-                                                            onerror="lods(this)"
-                                                            style="width: auto; height: 504px; margin-top: 0px; margin-left: 0px; visibility: visible;"></span>
-              </div>
-              <div class="tit">
-                                <span class="font-35">金融
-                                    <i></i>
-                                </span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="business/movies.html"
-               title="影视">
-              <div class="img tran_scale">
-                                <span class="auto-img"><img src="static/images/20170221111126_4488.jpg"
-                                                            onerror="lods(this)"
-                                                            style="width: auto; height: 504px; margin-top: 0px; margin-left: 0px; visibility: visible;"></span>
-              </div>
-              <div class="tit">
-                                <span class="font-35">影视
-                                    <i></i>
-                                </span>
-              </div>
-            </a>
+            <router-link to="/hotel">
+              <a title="酒店">
+                <div class="img tran_scale">
+                <span class="auto-img">
+                  <img src="static/images/20170228150314_4504.jpg" style="width: auto; height: 504px; margin-top: 0px; margin-left: 0px; visibility: visible;">
+                </span>
+                </div>
+                <div class="tit">
+                  <span class="font-35">酒店<i></i></span>
+                </div>
+              </a>
+            </router-link>
           </li>
 
+          <li>
+            <router-link to="/education">
+              <a title="教育">
+                <div class="img tran_scale">
+                <span class="auto-img">
+                  <img src="static/images/20170221111126_4488.jpg" style="width: auto; height: 504px; margin-top: 0px; margin-left: 0px; visibility: visible;">
+                </span>
+                </div>
+                <div class="tit">
+                  <span class="font-35">教育<i></i></span>
+                </div>
+              </a>
+            </router-link>
+          </li>
         </ul>
       </div>
     </div>
     <div class="wrap clearfix">
       <div class="in_about cf">
-
         <div class="text fl">
           <h2 class="font-30 cf">我们是谁</h2>
           <div class="con">
-            <div class="edit_con_original edit-con-original">
-              <p>
-                <span class="span01">天圆集团</span>前身天圆经贸有限公司创办于1992年，1995年成立集团公司，至今已发展成为总资产超150亿的综合性集团公司。 </p>
-              <p> 在左安一董事长的带领下，秉承“
-                <span>商决于智、信取于诚</span>”的经营理念，锐意进取，开拓创新，逐步实现了自身经营的规范化、多元化和国际化。 </p>
-              <p> 目前，天圆集团已形成实业投资与金融资本两大板块互补互动的发展格局，经营领域涉及房地产开发、金融投资、资产管理、企业并购、生物科技、影视文化等业务。 </p>
-            </div>
+            <div class="edit_con_original edit-con-original" v-html="essay.content"></div>
           </div>
-
           <div class="more font-16">
-            <a href="about/index.html"
-               title="查看详情">查看详情</a>
+            <a @click="push('/index/detail', {name: '集团简介', type: 1})" title="查看详情" class="pointer">查看详情</a>
           </div>
-
         </div>
-
         <div class="in_video fr">
-          <div class="bx-wrapper"
-               style="max-width: 100%;">
+          <div class="bx-wrapper" style="max-width: 100%;">
             <div class="bx-viewport"
                  style="width: 100%; overflow: hidden; position: relative; height: 330px;">
-              <ul style="width: 415%; position: relative; transition-duration: 0s; transform: translate3d(-587px, 0px, 0px);">
-                <li style="float: left; list-style: none; position: relative; width: 587px;"
-                    class="bx-clone"><img src="static/images/20170228181253_1725.jpg"
-                                          title="/upload/mobile.mp4"
-                                          alt="/upload/mobile.mp4"
-                                          onerror="lods(this)">
-                  <a href="javascript:void(0);"
-                     data-mp4="static/images/20170301095808_0024.mp4"
-                     data-img="static/images/20170228/20170228181253_1725.jpg"
-                     title="/upload/mobile.mp4"
-                     alt="/upload/mobile.mp4"></a>
-                </li>
-
-                <li style="float: left; list-style: none; position: relative; width: 587px;"><img src="static/images/20170228175731_0347.jpg"
-                                                                                                  onerror="lods(this)">
-                  <a href="javascript:void(0);"
-                     data-mp4="static/images/20170228180153_8747.mp4"
-                     data-img="static/images/20170228175731_0347.jpg"></a>
-                </li>
-                <li style="float: left; list-style: none; position: relative; width: 587px;"><img src="static/images/20170228181253_1725.jpg"
-                                                                                                  title="/upload/mobile.mp4"
-                                                                                                  alt="/upload/mobile.mp4"
-                                                                                                  onerror="lods(this)">
-                  <a href="javascript:void(0);"
-                     data-mp4="static/images/20170301095808_0024.mp4"
-                     data-img="static/images/20170228/20170228181253_1725.jpg"
-                     title="/upload/mobile.mp4"
-                     alt="/upload/mobile.mp4"></a>
-                </li>
-
-                <li style="float: left; list-style: none; position: relative; width: 587px;"
-                    class="bx-clone"><img src="static/images/20170228175731_0347.jpg"
-                                          onerror="lods(this)">
-                  <a href="javascript:void(0);"
-                     data-mp4="static/images/20170228180153_8747.mp4"
-                     data-img="static/images/20170228/20170228175731_0347.jpg"></a>
+              <ul style="width: 415%; position: relative; transition-duration: 0s;">
+                <li style="float: left; list-style: none; position: relative; width: 587px;">
+                  <img :src="essay.imgUri" title="essay.title">
                 </li>
               </ul>
             </div>
           </div>
         </div>
-
       </div>
       <div class="in_news cf">
         <h2 class="in_tit cf">
-          <a href="aid_nav/links.html">
-            <span class="span01 font-30">天圆 · 新闻中心</span>
-            <span class="span02 font-12">G.S Group<br>News center</span>
-          </a>
+          <router-link to="/news">
+            <a>
+              <span class="span01 font-30">天圆 · 新闻中心</span>
+              <span class="span02 font-12">G.S Group<br>News center</span>
+            </a>
+          </router-link>
         </h2>
-
-        <div class="bx-wrapper"
-             style="max-width: 1277px; margin: 0px auto;">
-          <div class="bx-viewport"
-               style="width: 100%; overflow: hidden; position: relative; height: 454px;">
-            <ul style="width: 515%; position: relative; transition-duration: 0s; transform: translate3d(-1312.97px, 0px, 0px);">
-              <li style="float: left; list-style: none; position: relative; width: 394.667px; margin-right: 43px;"
-                  class="bx-clone">
+        <div class="bx-wrapper" style="max-width: 1277px; margin: 0px auto;">
+          <div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 454px;">
+            <ul style="width: 515%; position: relative; transition-duration: 0s;">
+              <li v-for="(item,index) in essayList.list" :key="index" style="float: left; list-style: none; position: relative; width: 394.667px; margin-right: 43px;" class="bx-clone">
                 <div class="img tran_scale">
-                  <a href="/content/details3_405.html"
-                     target="_blank"
-                     title=""><img src="static/images/20170628101720_8187.jpg"
-                                   class="ratio-img"
-                                   data-ratio="0.5668"
-                                   onerror="lods(this)"
-                                   title=""
-                                   style="height: 223px;"></a>
+                  <a title=""><img :src="item.imgUri | getdefaultImg" class="ratio-img" data-ratio="0.5668" style="height: 223px;"></a>
                 </div>
                 <div class="con">
                   <div class="date en">
-                    <span class="font-39">28</span>
-                    <span class="font-12">2017/06</span>
+                    <span class="font-39">{{item.day}}</span>
+                    <span class="font-12">{{item.yearMonth}}</span>
                   </div>
                   <h3 class="font-18">
-                    <a href="/content/details3_405.html"
-                       target="_blank"
-                       title="天圆集团董事局主席左安一率企业家考察团走进辽宁">天圆集团董事局主席左安一率企业家考察团走进辽宁</a>
+                    <router-link :to="`/newsDetail/${item.id}`">
+                      <a :title="item.title">{{item.title}}</a>
+                    </router-link>
                   </h3>
-                  <p> 6月17日至19日，天圆集团董事局主席、神州企业家俱乐部主席左安一率领神州企业家俱乐部轮值主席、北京顺天通集团董事长田在玮、步长集团董事局主席赵涛、中基控股集团董事长葛坚及部分在京省级企业商会的企业家近60人的考察团走进辽宁，开展系列商务考察交流活动，企业家考察团受到辽宁省、沈阳市、鞍山市等省市领导的高度重视。</p>
-                  <div class="more">
-                    <a href="/content/details3_405.html"
-                       target="_blank"
-                       title=""></a>
-                  </div>
-                </div>
-              </li>
-              <li style="float: left; list-style: none; position: relative; width: 394.667px; margin-right: 43px;"
-                  class="bx-clone">
-                <div class="img tran_scale">
-                  <a href="/content/details3_391.html"
-                     target="_blank"
-                     title=""><img src="static/images/20170407131916_4160.jpg"
-                                   class="ratio-img"
-                                   data-ratio="0.5668"
-                                   onerror="lods(this)"
-                                   title=""
-                                   style="height: 223px;"></a>
-                </div>
-                <div class="con">
-                  <div class="date en">
-                    <span class="font-39">30</span>
-                    <span class="font-12">2017/03</span>
-                  </div>
-                  <h3 class="font-18">
-                    <a href="/content/details3_391.html"
-                       target="_blank"
-                       title="天圆集团获廊坊银行50亿授信">天圆集团获廊坊银行50亿授信</a>
-                  </h3>
-                  <p>2017年3月30日，天圆集团与廊坊银行在天圆祥泰大厦举行签约仪式，双方达成战略合作协议，廊坊银行承诺向天圆集团提供50亿元授信额度。</p>
-                  <div class="more">
-                    <a href="/content/details3_391.html"
-                       target="_blank"
-                       title=""></a>
-                  </div>
-                </div>
-              </li>
-              <li style="float: left; list-style: none; position: relative; width: 394.667px; margin-right: 43px;"
-                  class="bx-clone">
-                <div class="img tran_scale">
-                  <a href="/content/details3_320.html"
-                     target="_blank"
-                     title=""><img src="static/images/20170111102941_1350.jpeg"
-                                   class="ratio-img"
-                                   data-ratio="0.5668"
-                                   onerror="lods(this)"
-                                   title=""
-                                   style="height: 223px;"></a>
-                </div>
-                <div class="con">
-                  <div class="date en">
-                    <span class="font-39">01</span>
-                    <span class="font-12">2016/07</span>
-                  </div>
-                  <h3 class="font-18">
-                    <a href="/content/details3_320.html"
-                       target="_blank"
-                       title="天圆祥泰大厦-龙脉新地标 京城新名片">天圆祥泰大厦-龙脉新地标 京城新名片</a>
-                  </h3>
-                  <p>2016年7月1日，阳光普照，蓝天白云。北京天圆集团总部—天圆祥泰大厦举行了隆重的开业典礼。</p>
-                  <div class="more">
-                    <a href="/content/details3_320.html"
-                       target="_blank"
-                       title=""></a>
-                  </div>
-                </div>
-              </li>
-
-              <li style="float: left; list-style: none; position: relative; width: 394.667px; margin-right: 43px;">
-                <div class="img tran_scale">
-                  <a href="/content/details3_405.html"
-                     target="_blank"
-                     title=""><img src="static/images/20170628101720_8187.jpg"
-                                   class="ratio-img"
-                                   data-ratio="0.5668"
-                                   onerror="lods(this)"
-                                   title=""
-                                   style="height: 223px;"></a>
-                </div>
-                <div class="con">
-                  <div class="date en">
-                    <span class="font-39">28</span>
-                    <span class="font-12">2017/06</span>
-                  </div>
-                  <h3 class="font-18">
-                    <a href="/content/details3_405.html"
-                       target="_blank"
-                       title="天圆集团董事局主席左安一率企业家考察团走进辽宁">天圆集团董事局主席左安一率企业家考察团走进辽宁</a>
-                  </h3>
-                  <p> 6月17日至19日，天圆集团董事局主席、神州企业家俱乐部主席左安一率领神州企业家俱乐部轮值主席、北京顺天通集团董事长田在玮、步长集团董事局主席赵涛、中基控股集团董事长葛坚及部分在京省级企业商会的企业家近60人的考察团走进辽宁，开展系列商务考察交流活动，企业家考察团受到辽宁省、沈阳市、鞍山市等省市领导的高度重视。</p>
-                  <div class="more">
-                    <a href="/content/details3_405.html"
-                       target="_blank"
-                       title=""></a>
-                  </div>
-                </div>
-              </li>
-              <li style="float: left; list-style: none; position: relative; width: 394.667px; margin-right: 43px;">
-                <div class="img tran_scale">
-                  <a href="/content/details3_391.html"
-                     target="_blank"
-                     title=""><img src="static/images/20170407131916_4160.jpg"
-                                   class="ratio-img"
-                                   data-ratio="0.5668"
-                                   onerror="lods(this)"
-                                   title=""
-                                   style="height: 223px;"></a>
-                </div>
-                <div class="con">
-                  <div class="date en">
-                    <span class="font-39">30</span>
-                    <span class="font-12">2017/03</span>
-                  </div>
-                  <h3 class="font-18">
-                    <a href="/content/details3_391.html"
-                       target="_blank"
-                       title="天圆集团获廊坊银行50亿授信">天圆集团获廊坊银行50亿授信</a>
-                  </h3>
-                  <p>2017年3月30日，天圆集团与廊坊银行在天圆祥泰大厦举行签约仪式，双方达成战略合作协议，廊坊银行承诺向天圆集团提供50亿元授信额度。</p>
-                  <div class="more">
-                    <a href="/content/details3_391.html"
-                       target="_blank"
-                       title=""></a>
-                  </div>
-                </div>
-              </li>
-              <li style="float: left; list-style: none; position: relative; width: 394.667px; margin-right: 43px;">
-                <div class="img tran_scale">
-                  <a href="/content/details3_320.html"
-                     target="_blank"
-                     title=""><img src="static/images/20170111102941_1350.jpeg"
-                                   class="ratio-img"
-                                   data-ratio="0.5668"
-                                   onerror="lods(this)"
-                                   title=""
-                                   style="height: 223px;"></a>
-                </div>
-                <div class="con">
-                  <div class="date en">
-                    <span class="font-39">01</span>
-                    <span class="font-12">2016/07</span>
-                  </div>
-                  <h3 class="font-18">
-                    <a href="/content/details3_320.html"
-                       target="_blank"
-                       title="天圆祥泰大厦-龙脉新地标 京城新名片">天圆祥泰大厦-龙脉新地标 京城新名片</a>
-                  </h3>
-                  <p>2016年7月1日，阳光普照，蓝天白云。北京天圆集团总部—天圆祥泰大厦举行了隆重的开业典礼。</p>
-                  <div class="more">
-                    <a href="/content/details3_320.html"
-                       target="_blank"
-                       title=""></a>
-                  </div>
-                </div>
-              </li>
-
-              <li style="float: left; list-style: none; position: relative; width: 394.667px; margin-right: 43px;"
-                  class="bx-clone">
-                <div class="img tran_scale">
-                  <a href="/content/details3_405.html"
-                     target="_blank"
-                     title=""><img src="static/images/20170628101720_8187.jpg"
-                                   class="ratio-img"
-                                   data-ratio="0.5668"
-                                   onerror="lods(this)"
-                                   title=""
-                                   style="height: 223px;"></a>
-                </div>
-                <div class="con">
-                  <div class="date en">
-                    <span class="font-39">28</span>
-                    <span class="font-12">2017/06</span>
-                  </div>
-                  <h3 class="font-18">
-                    <a href="/content/details3_405.html"
-                       target="_blank"
-                       title="天圆集团董事局主席左安一率企业家考察团走进辽宁">天圆集团董事局主席左安一率企业家考察团走进辽宁</a>
-                  </h3>
-                  <p> 6月17日至19日，天圆集团董事局主席、神州企业家俱乐部主席左安一率领神州企业家俱乐部轮值主席、北京顺天通集团董事长田在玮、步长集团董事局主席赵涛、中基控股集团董事长葛坚及部分在京省级企业商会的企业家近60人的考察团走进辽宁，开展系列商务考察交流活动，企业家考察团受到辽宁省、沈阳市、鞍山市等省市领导的高度重视。</p>
-                  <div class="more">
-                    <a href="/content/details3_405.html"
-                       target="_blank"
-                       title=""></a>
-                  </div>
-                </div>
-              </li>
-              <li style="float: left; list-style: none; position: relative; width: 394.667px; margin-right: 43px;"
-                  class="bx-clone">
-                <div class="img tran_scale">
-                  <a href="/content/details3_391.html"
-                     target="_blank"
-                     title=""><img src="static/images/20170407131916_4160.jpg"
-                                   class="ratio-img"
-                                   data-ratio="0.5668"
-                                   onerror="lods(this)"
-                                   title=""
-                                   style="height: 223px;"></a>
-                </div>
-                <div class="con">
-                  <div class="date en">
-                    <span class="font-39">30</span>
-                    <span class="font-12">2017/03</span>
-                  </div>
-                  <h3 class="font-18">
-                    <a href="/content/details3_391.html"
-                       target="_blank"
-                       title="天圆集团获廊坊银行50亿授信">天圆集团获廊坊银行50亿授信</a>
-                  </h3>
-                  <p>2017年3月30日，天圆集团与廊坊银行在天圆祥泰大厦举行签约仪式，双方达成战略合作协议，廊坊银行承诺向天圆集团提供50亿元授信额度。</p>
-                  <div class="more">
-                    <a href="/content/details3_391.html"
-                       target="_blank"
-                       title=""></a>
-                  </div>
-                </div>
-              </li>
-              <li style="float: left; list-style: none; position: relative; width: 394.667px; margin-right: 43px;"
-                  class="bx-clone">
-                <div class="img tran_scale">
-                  <a href="/content/details3_320.html"
-                     target="_blank"
-                     title=""><img src="static/images/20170111102941_1350.jpeg"
-                                   class="ratio-img"
-                                   data-ratio="0.5668"
-                                   onerror="lods(this)"
-                                   title=""
-                                   style="height: 223px;"></a>
-                </div>
-                <div class="con">
-                  <div class="date en">
-                    <span class="font-39">01</span>
-                    <span class="font-12">2016/07</span>
-                  </div>
-                  <h3 class="font-18">
-                    <a href="/content/details3_320.html"
-                       target="_blank"
-                       title="天圆祥泰大厦-龙脉新地标 京城新名片">天圆祥泰大厦-龙脉新地标 京城新名片</a>
-                  </h3>
-                  <p>2016年7月1日，阳光普照，蓝天白云。北京天圆集团总部—天圆祥泰大厦举行了隆重的开业典礼。</p>
-                  <div class="more">
-                    <a href="/content/details3_320.html"
-                       target="_blank"
-                       title=""></a>
-                  </div>
+                  <p>{{item.contentShort}}</p>
+                  <router-link :to="`/newsDetail/${item.id}`">
+                    <div class="more"><a title=""></a></div>
+                  </router-link>
                 </div>
               </li>
             </ul>
@@ -439,6 +138,9 @@
   import { swiper, swiperSlide } from 'vue-awesome-swiper'
   import Footer from '@/components/Footer'
   import Header from '@/components/Header'
+  import imgApi from '../../api/img'
+  import essayApi from '../../api/essay'
+  import Code from '../../utils/code'
 
   export default {
     name: 'Index',
@@ -507,27 +209,84 @@
             el: '.swiper-pagination',
             clickable: true
           }
+        },
+        fileList: [],
+        essayList: {
+          list: [],
+          listQuery: {
+            exceptId: '',
+            type: 0,
+            current: 1,
+            size: 3
+          }
+        },
+        essay: {
+          title: '',
+          content: '',
+          imgUri: ''
         }
       }
     },
+
+    mounted () {
+      this.imgApi()
+      this.getEssay()
+      this.getArticleById(1)
+    },
+
     components: {
       swiper,
       swiperSlide,
       Footer,
       Header
     },
+
     computed: {
       swiper () {
         return this.$refs.mySwiper.swiper
       }
     },
-    mounted () {
+
+    methods: {
+      imgApi () {
+        imgApi.find({ type: 1 }).then(res => {
+          if (Code.SUCC === res.data.code) {
+            this.fileList = res.data.result
+          }
+        }).catch(() => {
+        })
+      },
+      getArticleById (type) {
+        essayApi.getById({ type }).then(res => {
+          if (res.data.result) {
+            this.essay = res.data.result
+          }
+        })
+      },
+      getEssay () {
+        essayApi.page(this.essayList.listQuery).then(res => {
+          this.essayList.list = res.data.result.records.map(item => {
+            if (item.title.length > 17) {
+              item.title = item.title.substring(0, 17) + '...'
+            }
+            return item
+          })
+        })
+      },
+      push (path, query = {}) {
+        this.$router.push({ path: path, query: query })
+      }
     }
   }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  .bx-viewport {
+    /*fix other elements on the page moving (on Chrome)*/
+    -webkit-transform: translatez(0);
+  }
+
   .swiper-wrap {
     width: 100%;
     padding-bottom: 50px;
@@ -906,5 +665,6 @@
 
   .swiper-wrap .swiper-container {
     box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.2);
+    margin-top:0 !important;
   }
 </style>
