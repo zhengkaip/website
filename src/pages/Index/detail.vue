@@ -17,7 +17,7 @@
           </div>
         </div>
         <div class="ab_intro cf">
-          <div class="img" v-if="essay.imgUri"><img :src="essay.imgUri" title="图片" style="max-width: 460px;"></div>
+          <div class="img"><img :src="essay.imgUri | getdefaultImg" title="图片" style="max-width: 460px;"></div>
           <div class="text" v-html="essay.content"></div>
         </div>
       </div>
@@ -59,8 +59,6 @@
       getArticleById (type) {
         if (type >= 20 && type <= 30) {
           articleApi.getArticleById(null, type).then(res => {
-            console.log('<><><>><><', res.data)
-
             if (res.data.result) {
               this.essay.content = res.data.result.body.contentHtml
             } else {
