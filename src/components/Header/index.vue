@@ -29,9 +29,6 @@
             <li @mouseover="showChildNav(items)" @mouseout="hideChildNav(items)" v-for="(items,index) in navList" v-bind:key="index" :class="{'on':items.showChildNav}">
               <a href="/index.html" class="font-16">{{items.name}}</a>
               <div class="cf l1 child" style="display:block;" v-if="items.child">
-                <div class="img">
-                  <img :src="items.child.img" class="ratio-img" data-ratio="0.5618" style="height: 200px;">
-                </div>
                 <div class="txt font-14">
                   <dl>
                     <dd v-for="(item,i) in items.child.childName" v-bind:key="i">
@@ -55,7 +52,8 @@
       return {
         navList: [
           {
-            name: '首页'
+            name: '首页',
+            showChildNav: false
           },
           {
             name: '天原集团',
@@ -66,7 +64,8 @@
             }
           },
           {
-            name: '新闻中心'
+            name: '新闻中心',
+            showChildNav: false
           },
           {
             name: '业务领域',
@@ -77,13 +76,16 @@
             }
           },
           {
-            name: '社会责任'
+            name: '社会责任',
+            showChildNav: false
           },
           {
-            name: '加入天圆'
+            name: '加入天圆',
+            showChildNav: false
           },
           {
-            name: '联系我们'
+            name: '联系我们',
+            showChildNav: false
           }
         ]
       }
