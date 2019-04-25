@@ -27,7 +27,7 @@
         <nav>
           <ul class="cf">
             <li @mouseover="showChildNav(items)" @mouseout="hideChildNav(items)" v-for="(items,index) in navList" v-bind:key="index" :class="{'on':items.showChildNav}">
-              <a class="font-16" @click="push(items.url)">{{items.name}}</a>
+              <a class="font-16 pointer" @click="push(items.url)">{{items.name}}</a>
               <div class="cf l1 child" style="display:block;" v-if="items.child">
                 <div class="img">
                   <img :src="items.child.img" class="ratio-img" data-ratio="0.5618" style="height: 200px;">
