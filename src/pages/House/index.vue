@@ -3,11 +3,10 @@
     <Header></Header>
     <div class="wrap clearfix">
       <div class="current cf">
-        <h1 class="fl font-36"><i></i>房地产</h1>
+        <h1 class="fl font-36"><i></i>集团产业</h1>
         <div class="cur_rt font-14 fr">
           <a title="首页" href="/index.html">首页</a>&gt;
-          <a href="/business/index.html" title="业务领域">业务领域</a>&gt;
-          <span>房地产</span>
+          <span>集团产业</span>
         </div>
       </div>
       <div class="bus_real_head cf">

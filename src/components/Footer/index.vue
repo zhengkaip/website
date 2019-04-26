@@ -33,17 +33,8 @@
           </dl>
           <dl>
             <dt class="font-15">
-              <a href="/business/index.html" title="业务领域">业务领域</a>
+              <router-link :to="{ path: '/house'}"><a>集团产业</a></router-link>
             </dt>
-            <dd>
-              <a href="/business/index.html">房地产</a>
-            </dd>
-            <dd>
-              <a href="/business/finance.html">金融</a>
-            </dd>
-            <dd>
-              <a href="/business/movies.html">影视</a>
-            </dd>
           </dl>
           <dl>
             <dt class="font-15">
