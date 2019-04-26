@@ -18,7 +18,7 @@
         </div>
         <div class="ab_intro cf">
           <div class="img"><img :src="essay.imgUri | getdefaultImg" title="图片" style="max-width: 460px;"></div>
-          <div class="text" style="line-height:1.8;color: #606060;font-size: 14px;font-family: 'Microsoft Yahei',arial,'\5b8b\4f53';" v-html="essay.content"></div>
+          <div class="text" style="line-height:1.8;color: #606060;font-size: 17pt;font-family: '华文中宋','Microsoft Yahei',arial,'\5b8b\4f53';font-weight: bold;" v-html="essay.content"></div>
         </div>
       </div>
     </section>
