@@ -62,13 +62,26 @@
                 <i><img src="static/images/con_text_ico03.png"></i>
               </li>
               <li class="li02">
+              <div class="tit">
+                <div class="wrapper">
+                  <div class="subwrap">
+                    <h3>
+                      <span>邮箱</span>
+                    </h3>
+                    <p>{{form.pcode}}</p>
+                  </div>
+                </div>
+              </div>
+              <i><img src="static/images/con_text_ico04.png"></i>
+            </li>
+              <li class="li02">
                 <div class="tit">
                   <div class="wrapper">
                     <div class="subwrap">
                       <h3>
-                        <span>邮编</span>
+                        <span>网址</span>
                       </h3>
-                      <p>{{form.pcode}}</p>
+                      <p>{{form.website}}</p>
                     </div>
                   </div>
                 </div>
@@ -105,7 +118,8 @@
           phone: '',
           fax: '',
           pcode: '',
-          conpanyname: ''
+          conpanyname: '',
+          website: ''
         }
       }
     },

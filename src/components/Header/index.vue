@@ -112,15 +112,9 @@
             url: '/news'
           },
           {
-            name: '业务领域',
+            name: '集团产业',
             showChildNav: false,
-            child: {
-              img: 'static/images/nav_adimg01.jpg',
-              childName: [{
-                name: '房地产开发',
-                url: '/house'
-              }]
-            }
+            url: '/house'
           },
           {
             name: '加入我们',
