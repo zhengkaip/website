@@ -119,7 +119,7 @@
                       <a :title="item.title">{{item.title}}</a>
                     </router-link>
                   </h3>
-                  <p>{{item.contentShort}}</p>
+                  <p style="font-size: 14px;font-family: 'Microsoft Yahei',arial,'\5b8b\4f53';">{{item.contentShort}}</p>
                   <router-link :to="`/newsDetail/${item.id}`">
                     <div class="more"><a title=""></a></div>
                   </router-link>
@@ -524,6 +524,14 @@
     display: none;
   }
 
+  p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }
+
   /*************in_news****************/
   .in_news {
     padding-top: 54px;
@@ -665,6 +673,6 @@
 
   .swiper-wrap .swiper-container {
     box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.2);
-    margin-top:0 !important;
+    margin-top: 0 !important;
   }
 </style>
