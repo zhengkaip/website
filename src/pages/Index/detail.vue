@@ -18,7 +18,9 @@
         </div>
         <div class="ab_intro cf">
           <div class="img"><img :src="essay.imgUri | getdefaultImg" title="图片"></div>
-          <div class="text" style="line-height:1.8;color: #606060;font-size: 14px;font-family: '华文中宋','Microsoft Yahei',arial,'\5b8b\4f53';font-weight: bold;text-align: left;" v-html="essay.content"></div>
+          <div class="text" style="line-height:1.8;color: #606060;font-size: 14px;font-family: '华文中宋','Microsoft Yahei',arial,'\5b8b\4f53';font-weight: bold;text-align: left;">
+              <div  v-html="essay.content"></div>
+          </div>
         </div>
       </div>
     </section>
@@ -152,6 +154,7 @@
   .ab_intro .text {
     overflow: hidden;
     padding-right: 5.47%;
+    padding-top: 6.75%
   }
 
   .ab_intro .text p {
