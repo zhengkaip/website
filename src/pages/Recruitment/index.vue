@@ -24,8 +24,21 @@
               <td class="t7">查看详情</td>
             </tr>
             </thead>
-            <tbody class="font-14 job"></tbody>
+            <tbody class="font-14 job">
+            <tr v-for="(item,index) in list" :key="index">
+              <td class="t1">{{item.position}}</td>
+              <td class="t2">{{item.count}}</td>
+              <td class="t3">{{item.educationBg}}</td>
+              <td class="t4">{{item.workplace}}</td>
+              <td class="t5">{{item.displayTime}}</td>
+              <td class="t6">{{item.jobCategory}}</td>
+              <td class="t7">
+                <router-link :to="{ path: '/index/detail', query: {name: '社会招聘', type: 23, id: item.essayId}}">查看详情</router-link>
+              </td>
+            </tr>
+            </tbody>
           </table>
+          <paginate :page-count="pages" :page-range="3" :margin-pages="2" :click-handler="clickCallback" :prev-text="'上一页'" :next-text="'下一页'" :container-class="'pagination'" :page-class="'page-item'"></paginate>
         </div>
       </div>
     </section>
@@ -35,12 +48,43 @@
 <script>
   import Footer from '@/components/Footer'
   import Header from '@/components/Header'
+  import Pagination from '../../components/Pagination'
+
+  import recruitApi from '../../api/recruit'
 
   export default {
     name: 'recruitment',
-    components: {
-      Footer,
-      Header
+
+    components: { Footer, Header, Pagination },
+
+    data () {
+      return {
+        total: 0,
+        pages: 0,
+        list: null,
+        listQuery: {
+          current: 1,
+          size: 10
+        }
+      }
+    },
+
+    created () {
+      this.getRecruitPage()
+    },
+
+    methods: {
+      clickCallback (pageNum) {
+        this.listQuery.current = pageNum
+        this.getRecruitPage()
+      },
+      getRecruitPage () {
+        recruitApi.page(this.listQuery).then(res => {
+          this.pages = res.data.result.pages
+          this.list = res.data.result.records
+          this.total = res.data.result.total
+        })
+      }
     }
   }
 </script>

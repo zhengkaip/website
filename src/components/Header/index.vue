@@ -144,7 +144,7 @@
                 }
               }, {
                 name: '社会招聘',
-                url: '/index/detail',
+                url: '/recruitment',
                 query: {
                   name: '社会招聘',
                   type: 23

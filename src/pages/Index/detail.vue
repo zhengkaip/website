@@ -19,7 +19,7 @@
         <div class="ab_intro cf">
           <div class="img"><img :src="essay.imgUri | getdefaultImg" title="图片"></div>
           <div class="text" style="line-height:1.8;color: #606060;font-size: 14px;font-family: '华文中宋','Microsoft Yahei',arial,'\5b8b\4f53';font-weight: bold;text-align: left;">
-              <div  v-html="essay.content"></div>
+            <div v-html="essay.content"></div>
           </div>
         </div>
       </div>
@@ -58,9 +58,9 @@
     },
 
     methods: {
-      getArticleById (type) {
+      getArticleById (type, id = null) {
         if (type >= 20 && type <= 30) {
-          articleApi.getArticleById(null, type).then(res => {
+          articleApi.getArticleById(id, type).then(res => {
             if (res.data.result) {
               this.essay.content = res.data.result.body.contentHtml
             } else {
@@ -80,13 +80,21 @@
     watch: {
       $route () {
         this.query = this.$route.query
-        this.getArticleById(this.query.type)
+        if (this.query.id) {
+          this.getArticleById(this.query.type, this.query.id)
+        } else {
+          this.getArticleById(this.query.type)
+        }
       }
     },
 
     mounted () {
       this.query = this.$route.query
-      this.getArticleById(this.query.type)
+      if (this.query.id) {
+        this.getArticleById(this.query.type, this.query.id)
+      } else {
+        this.getArticleById(this.query.type)
+      }
     }
   }
 </script>
