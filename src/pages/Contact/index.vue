@@ -208,6 +208,7 @@
     color: #717171;
     font-weight: normal;
     margin-bottom: 36px;
+    text-align: left;
   }
 
   .con_contact .con_text ul li {
