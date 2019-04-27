@@ -144,7 +144,7 @@
       map.centerAndZoom(point, 15)
       var marker = new BMap.Marker(point) // 创建标注
       map.addOverlay(marker) // 将标注添加到地图中
-      marker.setAnimation(BMAP_ANIMATION_BOUNCE) //跳动的动画
+      marker.setAnimation(BMAP_ANIMATION_BOUNCE) // 跳动的动画
     }
   }
 </script>
@@ -214,7 +214,7 @@
   .con_contact .con_text ul li {
     background: #f8f7f4;
     padding: 20px 10% 20px 21.63%;
-    min-height: 67px;
+    min-height: 107px;
     position: relative;
   }
 
@@ -232,6 +232,7 @@
   .con_contact .con_text ul li h3 {
     color: #a79172;
     margin-bottom: 6px;
+    text-align: left;
   }
 
   .con_contact .con_text ul li h3 span {
@@ -242,6 +243,7 @@
 
   .con_contact .con_text ul li p {
     line-height: 128.6%;
+    text-align: left;
   }
 
   .con_contact .con_text ul li.li02 {
