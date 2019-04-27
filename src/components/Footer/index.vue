@@ -62,12 +62,12 @@
             <ul>
               <li>
                 <i><img src="static/images/20170220135430_3836.jpg" onerror="lods(this)"></i>
-                <p>官方微信：<br>天圆集团官方微信</p>
+                <p>官方微信：<br>珩亿达投资控股集团官方微信</p>
               </li>
               <li>
                 <i><img src="static/images/ft_share_img01.png" onerror="lods(this)"></i>
-                <p>新浪微博：天圆集团官方微博<br>
-                  <a href="http://web.com/tianyuan" target="_blank" title="http://web.com/tianyuan">http://web.com/tianyuan</a>
+                <p>新浪微博：珩亿达投资控股集团官方微博<br>
+                  <a href="http://www.hydjt.cn" target="_blank" title="http://www.hydjt.cn">http://www.hydjt.cn</a>
                 </p>
               </li>
             </ul>
@@ -78,19 +78,19 @@
                 <router-link to="/contact"><a title="联系我们">联系我们</a></router-link>
               </li>
               <li>
-                <a href="/aid_nav/sitemap.html" title="网站地图">网站地图</a>
+                <a href="#" title="集团产业">集团产业</a>
               </li>
               <li>
-                <a href="/aid_nav/legal.html" title="法律声明">法律声明</a>
+                <a href="#" title="新闻中心">新闻中心</a>
               </li>
               <li>
-                <a href="/about/index.html" title="关于天圆">关于天圆</a>
+                <a href="#" title="加入我们">加入我们</a>
               </li>
             </ul>
           </div>
-          <div class="copy font-12 cf">© 2019 天圆集团 ALL RIGHTS RESERVED
-            <a href="http://www.miibeian.gov.cn" title="京ICP备11040840号-2" class="a1" target="_blank">京ICP备11040840号-2</a>
-            <a href="http://www.xinhongru.com" target="_blank" title="xinhongru.com">Powered by xinhongru.com</a>
+          <div class="copy font-12 cf">© 2019 珩亿达投资控股集团 ALL RIGHTS RESERVED
+            <a href="#" title="京ICP备11040840号-2" class="a1" target="_blank">粤ICP备19026004号-1</a>
+            <!-- <a href="#" target="_blank" title="xinhongru.com">Powered by xinhongru.com</a> -->
           </div>
         </div>
       </div>
