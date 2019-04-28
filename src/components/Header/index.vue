@@ -151,7 +151,7 @@
                 }
               }, {
                 name: '校园招聘',
-                url: '/index/detail',
+                url: '/recruitment',
                 query: {
                   name: '校园招聘',
                   type: 24

@@ -4,11 +4,11 @@
     <section class="main clearfix">
       <div class="wrap clearfix">
         <div class="current cf">
-          <h1 class="fl font-36"><i></i>社会招聘</h1>
+          <h1 class="fl font-36"><i></i>{{query.name}}</h1>
           <div class="cur_rt font-14 fr">
             <a title="首页" href="/index.html">首页</a>&gt;
-            <a href="/join/index.html" title="加入天圆">加入天圆</a>&gt;
-            <span>社会招聘</span>
+            <a href="/join/index.html" title="加入我们">加入我们</a>&gt;
+            <span>{{query.name}}</span>
           </div>
         </div>
         <div class="job_list cf">
@@ -32,8 +32,11 @@
               <td class="t4">{{item.workplace}}</td>
               <td class="t5">{{item.displayTime}}</td>
               <td class="t6">{{item.jobCategory}}</td>
-              <td class="t7">
+              <td class="t7" v-if="query.type===23">
                 <router-link :to="{ path: '/index/detail', query: {name: '社会招聘', type: 23, id: item.essayId}}">查看详情</router-link>
+              </td>
+              <td class="t7" v-if="query.type===24">
+                <router-link :to="{ path: '/index/detail', query: {name: '校园招聘', type: 24, id: item.essayId}}">查看详情</router-link>
               </td>
             </tr>
             </tbody>
@@ -59,10 +62,14 @@
 
     data () {
       return {
+        query: {
+          name: ''
+        },
         total: 0,
         pages: 0,
         list: null,
         listQuery: {
+          type: 1,
           current: 1,
           size: 10
         }
@@ -70,6 +77,8 @@
     },
 
     created () {
+      this.query = this.$route.query
+      this.listQuery.type = this.$route.query.type === 23 ? 1 : 2
       this.getRecruitPage()
     },
 
@@ -85,7 +94,15 @@
           this.total = res.data.result.total
         })
       }
-    }
+    },
+
+    watch: {
+      $route () {
+        this.query = this.$route.query
+        this.listQuery.type = this.$route.query.type === 23 ? 1 : 2
+        this.getRecruitPage()
+      }
+    },
   }
 </script>
 
