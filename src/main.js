@@ -3,6 +3,8 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
 import '../static/css/common.css'
 import 'swiper/dist/css/swiper.css'
 import Paginate from 'vuejs-paginate'
@@ -14,6 +16,7 @@ Vue.component('paginate', Paginate)
 // register global utility filters.
 Object.keys(filters).forEach(key => Vue.filter(key, filters[key]))
 
+Vue.use(ElementUI);
 Vue.config.productionTip = false
 /* eslint-disable no-new */
 new Vue({
