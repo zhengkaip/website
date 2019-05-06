@@ -32,10 +32,10 @@
               <td class="t4">{{item.workplace}}</td>
               <td class="t5">{{item.displayTime}}</td>
               <td class="t6">{{item.jobCategory}}</td>
-              <td class="t7" v-if="query.type===23">
+              <td class="t7" v-if="query.type===23||query.type==='23'">
                 <router-link :to="{ path: '/index/detail', query: {name: '社会招聘', type: 23, id: item.essayId}}">查看详情</router-link>
               </td>
-              <td class="t7" v-if="query.type===24">
+              <td class="t7" v-if="query.type===24||query.type==='24'">
                 <router-link :to="{ path: '/index/detail', query: {name: '校园招聘', type: 24, id: item.essayId}}">查看详情</router-link>
               </td>
             </tr>
@@ -63,7 +63,8 @@
     data () {
       return {
         query: {
-          name: ''
+          name: '',
+          type: null
         },
         total: 0,
         pages: 0,
@@ -78,6 +79,7 @@
 
     created () {
       this.query = this.$route.query
+      console.log('<>><<><><>><11111', this.query)
       this.listQuery.type = this.$route.query.type === 23 ? 1 : 2
       this.getRecruitPage()
     },
@@ -99,6 +101,7 @@
     watch: {
       $route () {
         this.query = this.$route.query
+        console.log('<>><<><><>><22222', this.query)
         this.listQuery.type = this.$route.query.type === 23 ? 1 : 2
         this.getRecruitPage()
       }
