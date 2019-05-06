@@ -89,7 +89,7 @@
             </ul>
           </div>
           <div class="copy font-12 cf">© 2019 珩亿达投资控股集团 ALL RIGHTS RESERVED
-            <a href="#" title="京ICP备11040840号-2" class="a1" target="_blank">粤ICP备19026004号-1</a>
+            <a title="京ICP备11040840号-2" class="a1" target="_blank">粤ICP备19026004号-1</a>
             <!-- <a href="#" target="_blank" title="xinhongru.com">Powered by xinhongru.com</a> -->
           </div>
         </div>
