@@ -14,7 +14,7 @@
                   <span class="view en">{{essay.viewCounts}}</span>
                 </div>
               </div>
-              <div class="art-text-box edit_con_original font-14" style="line-height:180%;color: #404040;font-size: 15px;font-family: 'Microsoft Yahei',arial,'\5b8b\4f53';text-indent: 2em;" v-html="essay.content"></div>
+              <div class="art-text-box edit_con_original font-14" style="line-height:180%;color: #404040;font-size: 15px;font-family: 'Microsoft Yahei',arial,'\5b8b\4f53';text-indent: 2em;word-wrap:break-word;word-break:keep-all;" v-html="essay.content"></div>
               <div class="clear"></div>
               <div class="pager-close cf">
                 <div class="close-right  font-14">
