@@ -78,13 +78,13 @@
                 <router-link to="/contact"><a title="联系我们">联系我们</a></router-link>
               </li>
               <li>
-                <a href="#" title="集团产业">集团产业</a>
+                <router-link :to="{ path: '/house'}">集团产业</router-link>
               </li>
               <li>
-                <a href="#" title="新闻中心">新闻中心</a>
+                <router-link :to="{ path: '/news'}"><a>新闻中心</a></router-link>
               </li>
               <li>
-                <a href="#" title="加入我们">加入我们</a>
+                <router-link :to="{ path: '/index/detail', query: {name: '人才理念', type: 20}}"><a>加入我们</a></router-link>
               </li>
             </ul>
           </div>
