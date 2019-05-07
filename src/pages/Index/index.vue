@@ -2,7 +2,7 @@
   <div>
     <Header></Header>
     <div class="swiper-wrap">
-      <swiper :options="swiperOption" ref="mySwiper" style="margin-top: 10px;">
+      <swiper :options="swiperOption" ref="mySwiper" style="margin-top: 10px;padding-top: 45px;">
         <swiper-slide v-for="(item,index) in fileList" :key="index">
           <div style="display: flex;justify-content: center;align-items: center;height: 300px;">
             <img :src="item.url" class="ratio-img" data-ratio="0.4386">
