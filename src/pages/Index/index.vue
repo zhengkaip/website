@@ -38,7 +38,7 @@
             </router-link>
           </li>
           <li>
-            <router-link to="/hotel">
+            <router-link to="/house">
               <a title="酒店">
                 <div class="img tran_scale">
                 <span class="auto-img">
@@ -53,7 +53,7 @@
           </li>
 
           <li>
-            <router-link to="/education">
+            <router-link to="/house">
               <a title="教育">
                 <div class="img tran_scale">
                 <span class="auto-img">
