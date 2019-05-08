@@ -51,7 +51,6 @@
               </a>
             </router-link>
           </li>
-
           <li>
             <router-link to="/house">
               <a title="教育">
