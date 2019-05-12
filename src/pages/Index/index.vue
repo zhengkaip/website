@@ -651,6 +651,7 @@
 <style>
   .swiper-wrap .swiper-pagination {
     padding: 5px 5px;
+    width: 100%;
   }
 
   .swiper-wrap .swiper-pagination-bullet {
