@@ -4,7 +4,7 @@
     <div class="swiper-wrap">
       <swiper v-if="fileList.length>1" :options="swiperOption" ref="mySwiper" style="margin-top: 10px;padding-top: 45px;">
         <swiper-slide v-for="(item,index) in fileList" :key="index">
-          <div style="display: flex;justify-content: center;align-items: center;height: 300px;">
+          <div style="display: flex;justify-content: center;align-items: center;height: 366px;">
             <img :src="item.url" class="ratio-img" data-ratio="0.4386">
           </div>
         </swiper-slide>
