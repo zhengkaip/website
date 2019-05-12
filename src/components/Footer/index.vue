@@ -61,7 +61,7 @@
           <div class="ft_share font-12 cf">
             <ul>
               <li>
-                <i><img src="static/images/20170220135430_3836.jpg" onerror="lods(this)"></i>
+                <i><img src="" onerror="lods(this)"></i>
                 <p>官方微信：<br>珩亿达投资控股集团官方微信</p>
               </li>
               <li>

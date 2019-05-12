@@ -139,14 +139,14 @@
                   <a href="/content/details3_405.html"
                      class="tran_scale"
                      target="_blank"
-                     title="天圆集团董事局主席左安一率企业家考察团走进辽宁"><img src="static/images/20170628101720_8187.jpg"
+                     title="珩亿达集团董事局主席左安一率企业家考察团走进辽宁"><img src="static/images/20170628101720_8187.jpg"
                                                           onerror="lods(this)"></a>
                 </div>
                 <p class="date font-12 en">2017/06/28</p>
                 <p class="font-18">
                   <a href="/content/details3_405.html"
                      target="_blank"
-                     title="天圆集团董事局主席左安一率企业家考察团走进辽宁">天圆集团董事局主席左安一率企业家考察团走进辽宁</a>
+                     title="珩亿达集团董事局主席左安一率企业家考察团走进辽宁">珩亿达集团董事局主席左安一率企业家考察团走进辽宁</a>
                 </p>
               </li>
               <li>
@@ -154,14 +154,14 @@
                   <a href="/content/details3_391.html"
                      class="tran_scale"
                      target="_blank"
-                     title="天圆集团获廊坊银行50亿授信"><img src="static/images/20170407131916_4160.jpg"
+                     title="珩亿达集团获廊坊银行50亿授信"><img src="static/images/20170407131916_4160.jpg"
                                                  onerror="lods(this)"></a>
                 </div>
                 <p class="date font-12 en">2017/03/30</p>
                 <p class="font-18">
                   <a href="/content/details3_391.html"
                      target="_blank"
-                     title="天圆集团获廊坊银行50亿授信">天圆集团获廊坊银行50亿授信</a>
+                     title="珩亿达集团获廊坊银行50亿授信">珩亿达集团获廊坊银行50亿授信</a>
                 </p>
               </li>
               <li>

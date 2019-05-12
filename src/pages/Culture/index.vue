@@ -10,7 +10,7 @@
                     <a title="首页"
                        href="/index.html">首页</a>&gt;
                     <a href="/about/index.html"
-                       title="天圆集团">天圆集团</a>&gt;
+                       title="珩亿达集团">珩亿达集团</a>&gt;
                     <span>企业文化</span>
                 </div>
             </div>
@@ -29,12 +29,12 @@
                             <dd>
                                 <div class="edit_con_original edit-con-original">
                                     <p>
-                                        天圆集团企业文化的核心理念是：<br>
+                                        珩亿达集团企业文化的核心理念是：<br>
                                         <span>”商决于智、信取于诚“</span> 。
                                     </p>
                                     <p>
                                         锐意进取，开拓创新，共同塑造
-                                        <span>“善良、智慧、高效、卓越”</span>的企业精神，逐步实现天圆集团的经营规范化、多元化和国际化。
+                                        <span>“善良、智慧、高效、卓越”</span>的企业精神，逐步实现珩亿达集团的经营规范化、多元化和国际化。
                                     </p>
                                 </div>
                             </dd>

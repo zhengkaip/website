@@ -17,8 +17,8 @@
         <h2 class="in_tit cf">
           <router-link to="/house">
             <a>
-              <span class="span01 font-30">天圆 · 业务领域</span>
-              <span class="span02 font-12">G.S Group<br>Business field</span>
+              <span class="span01 font-30">珩亿达集团 · 集团产业</span>
+              <span class="span02 font-12">HENGYIDA GROUP<br>Group of Industries</span>
             </a>
           </router-link>
         </h2>
@@ -96,8 +96,8 @@
         <h2 class="in_tit cf">
           <router-link to="/news">
             <a>
-              <span class="span01 font-30">天圆 · 新闻中心</span>
-              <span class="span02 font-12">G.S Group<br>News center</span>
+              <span class="span01 font-30">珩亿达集团 · 新闻中心</span>
+              <span class="span02 font-12">HENGYIDA GROUP<br>News center</span>
             </a>
           </router-link>
         </h2>
@@ -172,7 +172,7 @@
             name: '社会责任'
           },
           {
-            name: '加入天圆'
+            name: '加入珩亿达'
           },
           {
             name: '联系我们'

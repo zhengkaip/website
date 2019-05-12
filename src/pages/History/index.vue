@@ -7,7 +7,7 @@
           <h1 class="fl font-36"><i></i>发展历程</h1>
           <div class="cur_rt font-14 fr">
             <a title="首页" href="/index.html">首页</a>&gt;
-            <a href="/about/index.html" title="天圆集团">天圆集团</a>&gt;
+            <a href="/about/index.html" title="珩亿达集团">珩亿达集团</a>&gt;
             <span>大事记</span>
           </div>
         </div>
@@ -24,9 +24,9 @@
                       <dt class="font-24"><span>03/30<i></i></span></dt>
                       <dd>
                         <h3 class="font-22 ut-s">
-                          <a href="/content/details37_394.html" target="_blank" title="天圆集团获廊坊银行50亿授信">天圆集团获廊坊银行50亿授信</a>
+                          <a href="/content/details37_394.html" target="_blank" title="珩亿达集团获廊坊银行50亿授信">珩亿达集团获廊坊银行50亿授信</a>
                         </h3>
-                        <p class="font-12">2017年3月30日，天圆集团与廊坊银行在天圆祥泰大厦举行签约仪式，双方达成战略合作协议，廊坊银行承诺向天圆集团提供50亿元授信额度。</p>
+                        <p class="font-12">2017年3月30日，珩亿达集团与廊坊银行在天圆祥泰大厦举行签约仪式，双方达成战略合作协议，廊坊银行承诺向珩亿达集团提供50亿元授信额度。</p>
                         <div class="more font-12">
                           <a href="/content/details37_394.html" target="_blank" title="">了解详情 &gt;&gt;</a>
                         </div>
@@ -47,7 +47,7 @@
                         <h3 class="font-22 ut-s">
                           <a href="/content/details37_390.html" target="_blank" title="龙脉新地标 京城新名片— 北京天圆祥泰大厦举行盛大开业典礼">龙脉新地标 京城新名片— 北京天圆祥泰大厦举行盛大开业典礼</a>
                         </h3>
-                        <p class="font-12">2016年7月1日，阳光普照，蓝天白云。北京天圆集团总部—天圆祥泰大厦举行了隆重的开业典礼。来自世界各地的政界、商界及社会名流约300多位嘉宾们欢聚一堂，兴高采烈地出席了此次盛典，共同见证了这个值得纪念并让人期待已久的历史性时刻。</p>
+                        <p class="font-12">2016年7月1日，阳光普照，蓝天白云。北京珩亿达集团总部—天圆祥泰大厦举行了隆重的开业典礼。来自世界各地的政界、商界及社会名流约300多位嘉宾们欢聚一堂，兴高采烈地出席了此次盛典，共同见证了这个值得纪念并让人期待已久的历史性时刻。</p>
                         <div class="more font-12">
                           <a href="/content/details37_390.html" target="_blank" title="">了解详情 &gt;&gt;</a>
                         </div>
@@ -59,9 +59,9 @@
                       <dt class="font-24"><span>05/23<i></i></span></dt>
                       <dd>
                         <h3 class="font-22 ut-s">
-                          <a href="/content/details37_389.html" target="_blank" title="天圆集团乔迁天圆祥泰大厦——天公呈吉祥之瑞">天圆集团乔迁天圆祥泰大厦——天公呈吉祥之瑞</a>
+                          <a href="/content/details37_389.html" target="_blank" title="珩亿达集团乔迁天圆祥泰大厦——天公呈吉祥之瑞">珩亿达集团乔迁天圆祥泰大厦——天公呈吉祥之瑞</a>
                         </h3>
-                        <p class="font-12">2016年5月23日天圆集团乔迁天圆祥泰大厦之日，天公呈吉祥之瑞显双彩虹，天圆～英文对应有彩虹之义。</p>
+                        <p class="font-12">2016年5月23日珩亿达集团乔迁天圆祥泰大厦之日，天公呈吉祥之瑞显双彩虹，天圆～英文对应有彩虹之义。</p>
                         <div class="more font-12">
                           <a href="/content/details37_389.html" target="_blank" title="">了解详情 &gt;&gt;</a>
                         </div>
@@ -96,7 +96,7 @@
                         <h3 class="font-22 ut-s">
                           <a href="/content/details37_227.html" target="_blank" title="董事长左安一受邀出席辽宁大学毕业典礼">董事长左安一受邀出席辽宁大学毕业典礼</a>
                         </h3>
-                        <p class="font-12">2015年6月30日，辽宁大学2015年本科生毕业典礼暨学位授予仪式在蒲河校区体育馆隆重举行。天圆集团董事长左安一受辽宁大学潘一山校长的邀请代表优秀校友出席了此次毕业典礼。</p>
+                        <p class="font-12">2015年6月30日，辽宁大学2015年本科生毕业典礼暨学位授予仪式在蒲河校区体育馆隆重举行。珩亿达集团董事长左安一受辽宁大学潘一山校长的邀请代表优秀校友出席了此次毕业典礼。</p>
                         <div class="more font-12">
                           <a href="/content/details37_227.html" target="_blank" title="">了解详情 &gt;&gt;</a>
                         </div>
@@ -110,7 +110,7 @@
                         <h3 class="font-22 ut-s">
                           <a href="/content/details37_207.html" target="_blank" title="北京辽宁企业商会成立大会-董事长左安一当选首届会长">北京辽宁企业商会成立大会-董事长左安一当选首届会长</a>
                         </h3>
-                        <p class="font-12"> 2015年2月3日，北京辽宁企业商会成立大会在北京辽宁大厦举行。辽宁省相关部门领导，北京市相关部门领导和在京其他各省商会、外国驻京商会、辽宁其他省商会代表以及辽宁省在京企业家近千人出席。天圆集团董事长左安一当选首届会长。</p>
+                        <p class="font-12"> 2015年2月3日，北京辽宁企业商会成立大会在北京辽宁大厦举行。辽宁省相关部门领导，北京市相关部门领导和在京其他各省商会、外国驻京商会、辽宁其他省商会代表以及辽宁省在京企业家近千人出席。珩亿达集团董事长左安一当选首届会长。</p>
                         <div class="more font-12">
                           <a href="/content/details37_207.html" target="_blank" title="">了解详情 &gt;&gt;</a>
                         </div>
@@ -207,7 +207,7 @@
                       <dt class="font-24"><span>10/18<i></i></span></dt>
                       <dd>
                         <h3 class="font-22 ut-s">
-                          <a href="/content/details37_381.html" target="_blank" title="天圆集团与中铁建设集团签订天圆祥泰双子座项目建设协议">天圆集团与中铁建设集团签订天圆祥泰双子座项目建设协议</a>
+                          <a href="/content/details37_381.html" target="_blank" title="珩亿达集团与中铁建设集团签订天圆祥泰双子座项目建设协议">珩亿达集团与中铁建设集团签订天圆祥泰双子座项目建设协议</a>
                         </h3>
                         <p class="font-12">2013年10月18日，集团董事长左安一、副董事长田霁红、董事副总裁周浩律等领导参加集团下属北京天圆祥泰置业有限公司与中铁集团的签约仪式。</p>
                         <div class="more font-12">
@@ -393,9 +393,9 @@
                       <dt class="font-24"><span>10/28<i></i></span></dt>
                       <dd>
                         <h3 class="font-22 ut-s">
-                          <a href="/content/details37_232.html" target="_blank" title="天圆集团成立">天圆集团成立</a>
+                          <a href="/content/details37_232.html" target="_blank" title="珩亿达集团成立">珩亿达集团成立</a>
                         </h3>
-                        <p class="font-12">1995年10月，天圆集团创立。</p>
+                        <p class="font-12">1995年10月，珩亿达集团创立。</p>
                         <div class="more font-12">
                           <a href="/content/details37_232.html" target="_blank" title="">了解详情 &gt;&gt;</a>
                         </div>

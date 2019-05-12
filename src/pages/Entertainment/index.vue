@@ -16,9 +16,9 @@
       <div class="bus_finance_head cf">
         <div class="edit_con_original edit-con-original">
           <p>
-            <span style="line-height:1.8;">进军文化影视业是天圆集团主要业务发展方向之一。</span>
+            <span style="line-height:1.8;">进军文化影视业是珩亿达集团主要业务发展方向之一。</span>
           </p>
-          <p> 为了打造具有国际水准的影视产业，天圆集团通过与好莱坞多位顶级独立制片人、一线编剧和导演、具有国际经验的发行团队等多次沟通和洽谈，已经初步达成共识， </p>
+          <p> 为了打造具有国际水准的影视产业，珩亿达集团通过与好莱坞多位顶级独立制片人、一线编剧和导演、具有国际经验的发行团队等多次沟通和洽谈，已经初步达成共识， </p>
           <p>
             <strong>
               <span style="font-size:16px;">共同构建具有好莱坞六大电影公司结构的影视公司，</span>
@@ -48,7 +48,7 @@
                   <h3 class="font-18">
                     <a href="/content/details20_374.html" target="_blank" title="欢迎好莱坞代表团晚宴">欢迎好莱坞代表团晚宴</a>
                   </h3>
-                  <p>3月24日，天圆集团为前来参加“2016中美电影产业峰会”的好莱坞代表团举行了盛大的欢迎晚宴。</p>
+                  <p>3月24日，珩亿达集团为前来参加“2016中美电影产业峰会”的好莱坞代表团举行了盛大的欢迎晚宴。</p>
                   <div class="more">
                     <a href="/content/details20_374.html" target="_blank" title=""></a>
                   </div>
