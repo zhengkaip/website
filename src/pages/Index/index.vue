@@ -2,7 +2,7 @@
   <div>
     <Header></Header>
     <div class="swiper-wrap">
-      <swiper :options="swiperOption" ref="mySwiper" style="margin-top: 10px;padding-top: 45px;">
+      <swiper v-if="fileList.length>1" :options="swiperOption" ref="mySwiper" style="margin-top: 10px;padding-top: 45px;">
         <swiper-slide v-for="(item,index) in fileList" :key="index">
           <div style="display: flex;justify-content: center;align-items: center;height: 300px;">
             <img :src="item.url" class="ratio-img" data-ratio="0.4386">
@@ -185,12 +185,12 @@
           // 设定初始化时slide的索引
           initialSlide: 0,
           // 自动播放
-          autoplay: true,
-          // autoplay: {
-          //     delay: 3000,
-          //     stopOnLastSlide: false,
-          //     disableOnInteraction: true,
-          // },
+          // autoplay: true,
+          autoplay: {
+              delay: 3000,
+              stopOnLastSlide: false,
+              disableOnInteraction: true,
+          },
           // 滑动速度
           speed: 800,
           // 滑动方向
