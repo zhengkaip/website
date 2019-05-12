@@ -118,7 +118,7 @@ export default {
 .ab_intro .text {
     overflow: hidden;
     padding-right: 5.47%;
-    padding-top: 6.75%;
+    padding-top: 2.75%;
 }
 .ab_intro .text p {
     padding-bottom: 14px;
