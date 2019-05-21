@@ -2,7 +2,7 @@
   <header class="clearfix">
     <div class="head_top">
       <div class="wrap cf">
-        <div class="welcome font-12 en fl">Welcome to HENGYIDA INVESTMENT HOLDINGS GROUP</div>
+        <div class="welcome font-12 en fl">welcome to hengyida investment holdings group</div>
         <div class="top_share fr">
           <a class="a-1"></a>
           <a class="a-2 weixinbut" data-qrcode="/Upload/image/20170220/20170220135420_5371.jpg"></a>
@@ -10,7 +10,7 @@
         <div class="top_tel en fr">
           <ul>
             <li class="font-14">
-              <i><img src="static/images/top_tel_ico01.png"></i>0371-88959999
+              <i><img src="static/images/top_tel_ico01.png"></i>027-86669997
             </li>
             <li class="font-12">
               <a href="#"><i><img src="static/images/top_tel_ico02.png"></i>hydjt8888@163.com</a>

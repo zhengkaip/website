@@ -71,7 +71,7 @@
     <div class="wrap clearfix">
       <div class="in_about cf">
         <div class="text fl">
-          <h2 class="font-30 cf">我们是谁</h2>
+          <h2 class="font-30 cf">集团简介</h2>
           <div class="con">
             <div class="edit_con_original edit-con-original" v-html="essay.content"></div>
           </div>
