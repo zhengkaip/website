@@ -10,7 +10,7 @@
               <div class="art-title cf">
                 <h6 class="font-22">{{essay.title}}</h6>
                 <div class="basic-list font-14">
-                  <span class="date en">{{essay.createTime}}</span>
+                  <span class="date en">{{essay.displayTime}}</span>
                   <span class="view en">{{essay.viewCounts}}</span>
                 </div>
               </div>
@@ -51,7 +51,7 @@
                     </a>
                   </router-link>
                 </div>
-                <p class="date font-12 en">{{item.createTime}}</p>
+                <p class="date font-12 en">{{item.displayTime}}</p>
                 <p class="font-18">
                   <router-link :to="`/newsDetail/${item.id}`">
                     <a :title="item.title">{{item.title}}</a>
@@ -80,7 +80,7 @@
     data () {
       return {
         essay: {
-          createTime: '',
+          displayTime: '',
           content: ''
         },
         pre: {

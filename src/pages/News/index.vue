@@ -20,7 +20,7 @@
               <a :title="topEssay.title">{{topEssay.title}}</a>
             </router-link>
           </h2>
-          <div class="date font-12 en">{{topEssay.createTime}}</div>
+          <div class="date font-12 en">{{topEssay.displayTime}}</div>
           <p>{{topEssay.contentShort}}</p>
           <router-link :to="`/newsDetail/${topEssay.id}`">
             <div class="more"><a></a></div>
