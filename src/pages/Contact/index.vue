@@ -140,7 +140,7 @@
     mounted () {
       this.get()
       var map = new BMap.Map('map')
-      var point = new BMap.Point(116.404, 39.915)
+      var point = new BMap.Point(114.313558,30.602342)
       map.centerAndZoom(point, 15)
       var marker = new BMap.Marker(point) // 创建标注
       map.addOverlay(marker) // 将标注添加到地图中
